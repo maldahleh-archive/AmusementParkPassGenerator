@@ -103,7 +103,7 @@
 		4A2D4A3F1FD734150086ED0D /* AmusementParkPassGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				4A7EB94A1FD734F90059F15A /* AccessInformation */,
+				4A7EB94A1FD734F90059F15A /* Access */,
 				4A2D4A401FD734150086ED0D /* AppDelegate.swift */,
 				4A2D4A421FD734150086ED0D /* ViewController.swift */,
 				4A2D4A441FD734150086ED0D /* Main.storyboard */,
@@ -132,14 +132,14 @@
 			path = AmusementParkPassGeneratorUITests;
 			sourceTree = "<group>";
 		};
-		4A7EB94A1FD734F90059F15A /* AccessInformation */ = {
+		4A7EB94A1FD734F90059F15A /* Access */ = {
 			isa = PBXGroup;
 			children = (
 				4A7EB94B1FD735150059F15A /* AreaAccess.swift */,
 				4A7EB94D1FD735680059F15A /* RideAccess.swift */,
 				4A7EB9501FD737270059F15A /* DiscountAccess.swift */,
 			);
-			path = AccessInformation;
+			path = Access;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
