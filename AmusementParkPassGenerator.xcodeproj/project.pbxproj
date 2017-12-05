@@ -14,6 +14,9 @@
 		4A2D4A4B1FD734150086ED0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A491FD734150086ED0D /* LaunchScreen.storyboard */; };
 		4A2D4A561FD734150086ED0D /* AmusementParkPassGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D4A551FD734150086ED0D /* AmusementParkPassGeneratorTests.swift */; };
 		4A2D4A611FD734150086ED0D /* AmusementParkPassGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D4A601FD734150086ED0D /* AmusementParkPassGeneratorUITests.swift */; };
+		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
+		4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94D1FD735680059F15A /* RideAccess.swift */; };
+		4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB9501FD737270059F15A /* DiscountAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4A2D4A5C1FD734150086ED0D /* AmusementParkPassGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D4A601FD734150086ED0D /* AmusementParkPassGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmusementParkPassGeneratorUITests.swift; sourceTree = "<group>"; };
 		4A2D4A621FD734150086ED0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
+		4A7EB94D1FD735680059F15A /* RideAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAccess.swift; sourceTree = "<group>"; };
+		4A7EB9501FD737270059F15A /* DiscountAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		4A2D4A3F1FD734150086ED0D /* AmusementParkPassGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4A7EB94A1FD734F90059F15A /* AccessInformation */,
 				4A2D4A401FD734150086ED0D /* AppDelegate.swift */,
 				4A2D4A421FD734150086ED0D /* ViewController.swift */,
 				4A2D4A441FD734150086ED0D /* Main.storyboard */,
@@ -123,6 +130,16 @@
 				4A2D4A621FD734150086ED0D /* Info.plist */,
 			);
 			path = AmusementParkPassGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		4A7EB94A1FD734F90059F15A /* AccessInformation */ = {
+			isa = PBXGroup;
+			children = (
+				4A7EB94B1FD735150059F15A /* AreaAccess.swift */,
+				4A7EB94D1FD735680059F15A /* RideAccess.swift */,
+				4A7EB9501FD737270059F15A /* DiscountAccess.swift */,
+			);
+			path = AccessInformation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
+				4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */,
+				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,
+				4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */,
 				4A2D4A411FD734150086ED0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
