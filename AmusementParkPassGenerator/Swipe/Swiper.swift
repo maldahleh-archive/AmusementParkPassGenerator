@@ -22,7 +22,7 @@ class Swiper {
             print("Today is \(month)/\(day), Happy Birthday!")
         }
         
-        var result: (Bool, Int) = (false, 0)
+        var result: (result: Bool, discount: Percent) = (false, 0)
         if let areaAccess = accessType as? AreaAccess {
             result = (checkAreaAccessFor(entrant: entrant, forArea: areaAccess), 0)
         }
@@ -36,11 +36,11 @@ class Swiper {
         }
         
         entrant.swiped()
-        if result.0 {
-            if result.1 == 0 {
+        if result.result {
+            if result.discount == 0 {
                 print("You have been granted access!")
             } else {
-                print("You have been access to the discount with a percentage of \(result.1)!")
+                print("You have been access to the discount with a percentage of \(result.discount)!")
             }
         } else {
             print("You were not granted access!")

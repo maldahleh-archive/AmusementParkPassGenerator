@@ -132,7 +132,7 @@ class ViewController: UIViewController {
 //        } catch {
 //            fatalError()
 //        }
-
+//
 //        do {
 //            let entrant = try ClassicGuest(day: 5, month: 5, year: 1990)
 //            Swiper.processSwipeFor(entrant: entrant, withSwipeType: DiscountAccess.foodDiscount(discount: -1))
