@@ -8,7 +8,7 @@
 
 typealias Percent = Int
 
-enum DiscountAccess: Percent {
-    case foodDiscount
-    case merchandiseDiscount
+enum DiscountAccess {
+    case foodDiscount(discount: Percent)
+    case merchandiseDiscount(discount: Percent)
 }
