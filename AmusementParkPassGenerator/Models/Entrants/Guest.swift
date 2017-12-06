@@ -6,13 +6,7 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-protocol Guest {
-    var areaAccess: [AreaAccess] { get }
-    var rideAccess: [RideAccess] { get }
-    var discountAccess: [DiscountAccess] { get set }
-}
-
-class ClassicGuest: Guest {
+class ClassicGuest: Entrant {
     let areaAccess: [AreaAccess]
     let rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
