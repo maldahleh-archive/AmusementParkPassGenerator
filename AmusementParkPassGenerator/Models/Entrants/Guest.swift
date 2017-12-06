@@ -9,6 +9,8 @@
 import Foundation
 
 class ClassicGuest: Entrant {
+    var lastSwipe: Date?
+    
     let birthday: Date
     
     let areaAccess: [AreaAccess]
@@ -27,6 +29,10 @@ class ClassicGuest: Entrant {
         let createdBirthday = Date.create(day: day, month: month, year: year)
         
         try! self.init(birthday: createdBirthday)
+    }
+    
+    func swiped() {
+        lastSwipe = Date()
     }
 }
 

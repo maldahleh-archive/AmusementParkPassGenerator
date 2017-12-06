@@ -9,6 +9,8 @@
 import Foundation
 
 class Manager: Employee {
+    var lastSwipe: Date?
+    
     let name: Name
     let birthday: Date
     let address: Address
@@ -34,5 +36,9 @@ class Manager: Employee {
         self.name = name
         self.birthday = birthday
         self.address = address
+    }
+    
+    func swiped() {
+        lastSwipe = Date()
     }
 }

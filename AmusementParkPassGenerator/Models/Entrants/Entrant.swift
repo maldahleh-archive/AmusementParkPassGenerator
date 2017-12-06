@@ -19,7 +19,13 @@ extension Date {
     }
 }
 
-protocol Entrant: Dateable {
+protocol Swipeable {
+    var lastSwipe: Date? { get set }
+    
+    func swiped()
+}
+
+protocol Entrant: Dateable, Swipeable {
     var areaAccess: [AreaAccess] { get }
     var rideAccess: [RideAccess] { get set }
     var discountAccess: [DiscountAccess] { get set }

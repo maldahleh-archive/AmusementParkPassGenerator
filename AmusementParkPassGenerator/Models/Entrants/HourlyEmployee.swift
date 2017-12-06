@@ -9,6 +9,8 @@
 import Foundation
 
 class HourlyEmployee: Employee {
+    var lastSwipe: Date?
+    
     let name: Name
     let birthday: Date
     let address: Address
@@ -34,6 +36,10 @@ class HourlyEmployee: Employee {
             .foodDiscount(discount: 15),
             .merchandiseDiscount(discount: 25)
         ]
+    }
+    
+    func swiped() {
+        lastSwipe = Date()
     }
 }
 
