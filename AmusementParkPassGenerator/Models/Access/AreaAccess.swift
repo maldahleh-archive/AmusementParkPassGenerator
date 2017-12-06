@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum AreaAccess {
+enum AreaAccess: GenericAccess {
     case amusement
     case kitchen
     case rideControl

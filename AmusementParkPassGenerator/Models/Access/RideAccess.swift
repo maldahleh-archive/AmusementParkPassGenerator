@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum RideAccess {
+enum RideAccess: GenericAccess {
     case allRides
     case skipLines
 }
