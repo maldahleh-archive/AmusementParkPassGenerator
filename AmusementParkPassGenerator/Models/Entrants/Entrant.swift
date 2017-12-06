@@ -6,8 +6,21 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-protocol Entrant {
+import Foundation
+
+extension Date {
+    static func create(day: Int, month: Int, year: Int) -> Date {
+        var dateComponents = DateComponents()
+        dateComponents.day = day
+        dateComponents.month = month
+        dateComponents.year = year
+        
+        return Calendar.current.date(from: dateComponents)!
+    }
+}
+
+protocol Entrant: Dateable {
     var areaAccess: [AreaAccess] { get }
-    var rideAccess: [RideAccess] { get }
+    var rideAccess: [RideAccess] { get set }
     var discountAccess: [DiscountAccess] { get set }
 }

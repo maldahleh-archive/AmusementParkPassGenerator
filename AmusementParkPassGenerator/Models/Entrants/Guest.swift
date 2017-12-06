@@ -6,21 +6,39 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
+import Foundation
+
 class ClassicGuest: Entrant {
+    var birthday: Date
+    
     let areaAccess: [AreaAccess]
-    let rideAccess: [RideAccess]
+    var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init() {
+    init(birthday: Date) throws {
+        self.birthday = birthday
+        
         areaAccess = [.amusement]
         rideAccess = [.allRides]
         discountAccess = []
     }
+    
+    convenience init (day: Int, month: Int, year: Int) throws {
+        let createdBirthday = Date.create(day: day, month: month, year: year)
+        
+        try! self.init(birthday: createdBirthday)
+    }
 }
 
 class VIPGuest: ClassicGuest {
-    override init() {
-        super.init()
+    init(day: Int, month: Int, year: Int) throws {
+        let createdBirthday = Date.create(day: day, month: month, year: year)
+        try! super.init(birthday: createdBirthday)
+        
+        rideAccess = [
+            .allRides,
+            .skipLines
+        ]
         
         discountAccess = [
             .foodDiscount(discount: 10),
@@ -30,7 +48,12 @@ class VIPGuest: ClassicGuest {
 }
 
 class ChildGuest: ClassicGuest {
-    override init() {
-        super.init()
+    init(day: Int, month: Int, year: Int) throws {
+        let createdBirthday = Date.create(day: day, month: month, year: year)
+        try! super.init(birthday: createdBirthday)
+     
+        if !isUnderFive() {
+            // FIXME: Throw error
+        }
     }
 }

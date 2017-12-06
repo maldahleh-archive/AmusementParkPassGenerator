@@ -28,30 +28,28 @@ extension Date {
 protocol Dateable {
     var birthday: Date { get set }
     
-    func isBirthday() throws -> Bool
-    func isUnderFive() throws -> Bool
+    func isBirthday() -> Bool
+    func isUnderFive() -> Bool
 }
 
 extension Dateable {
-    func isBirthday() throws -> Bool {
+    func isBirthday() -> Bool {
         let currentDate = Date()
         let currentDateComponents = currentDate.dateComponents()
         let birthdayComponents = birthday.dateComponents()
         
         guard let currentDay = currentDateComponents.day, let currentMonth = currentDateComponents.month, let birthdayDay = birthdayComponents.day, let birthdayMonth = birthdayComponents.month else {
-            // FIXME: Throw error
-            return false
+            fatalError("Unexpected date error")
         }
         
         return currentDay == birthdayDay && currentMonth == birthdayMonth
     }
     
-    func isUnderFive() throws -> Bool {
+    func isUnderFive() -> Bool {
         let ageComponents = birthday.ageComponents()
         
         guard let age = ageComponents.year else {
-            // FIXME: Throw error
-            return false
+            fatalError("Unexpected date error")
         }
         
         return age < 5
