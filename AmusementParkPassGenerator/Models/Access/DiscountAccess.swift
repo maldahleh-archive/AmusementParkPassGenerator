@@ -11,4 +11,11 @@ typealias Percent = Int
 enum DiscountAccess: GenericAccess {
     case foodDiscount(discount: Percent)
     case merchandiseDiscount(discount: Percent)
+    
+    func stringName() -> String {
+        switch self {
+        case .foodDiscount(_): return "FoodDiscount"
+        case .merchandiseDiscount(_): return "MerchandiseDiscount"
+        }
+    }
 }

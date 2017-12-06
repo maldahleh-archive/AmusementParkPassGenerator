@@ -19,16 +19,16 @@ class Swiper {
             let month = entrant.birthday.dateComponents().month!
             let day = entrant.birthday.dateComponents().day!
             
-            print("Today is \(month) \(day), Happy Birthday!")
+            print("Today is \(month)/\(day), Happy Birthday!")
         }
         
-        var result: Bool
+        var result: (Bool, Int) = (false, 0)
         if let areaAccess = accessType as? AreaAccess {
-            result = checkAreaAccessFor(entrant: entrant, forArea: areaAccess)
+            result = (checkAreaAccessFor(entrant: entrant, forArea: areaAccess), 0)
         }
         
         if let rideAccess = accessType as? RideAccess {
-            result = checkRideAccessFor(entrant: entrant, forLevel: rideAccess)
+            result = (checkRideAccessFor(entrant: entrant, forLevel: rideAccess), 0)
         }
         
         if let discountAccess = accessType as? DiscountAccess {
@@ -36,8 +36,12 @@ class Swiper {
         }
         
         entrant.swiped()
-        if result {
-            print("You have been granted access!")
+        if result.0 {
+            if result.1 == 0 {
+                print("You have been granted access!")
+            } else {
+                print("You have been access to the discount with a percentage of \(result.1)!")
+            }
         } else {
             print("You were not granted access!")
         }
@@ -52,7 +56,18 @@ class Swiper {
     }
     
     static func checkDiscountsFor(entrant: Entrant, forType discountAccess: DiscountAccess) -> (result: Bool, discount: Percent) {
+        let discountString = discountAccess.stringName()
         
+        for discount in entrant.discountAccess {
+            let checkedDiscount = discount.stringName()
+            
+            if checkedDiscount == discountString {
+                switch discount {
+                case .foodDiscount(let discount): return (result: true, discount: discount)
+                case .merchandiseDiscount(let discount): return (result: true, discount: discount)
+                }
+            }
+        }
         
         return (result: false, discount: 0)
     }
