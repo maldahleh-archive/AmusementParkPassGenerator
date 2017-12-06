@@ -15,7 +15,11 @@ struct Name {
     }
     
     init(firstName: String, lastName: String) throws {
-        if firstName.isEmpty || lastName.isEmpty {
+        if firstName.isEmpty {
+            // FIXME: Throw error
+        }
+        
+        if lastName.isEmpty {
             // FIXME: Throw error
         }
         

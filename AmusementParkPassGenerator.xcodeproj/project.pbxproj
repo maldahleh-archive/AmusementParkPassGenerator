@@ -24,6 +24,8 @@
 		4AE06DE11FD7D4C200C4AD20 /* HourlyEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */; };
 		4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE21FD7D79A00C4AD20 /* Manager.swift */; };
 		4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE41FD7D9ED00C4AD20 /* Name.swift */; };
+		4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE91FD7DC4500C4AD20 /* Address.swift */; };
+		4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyEmployee.swift; sourceTree = "<group>"; };
 		4AE06DE21FD7D79A00C4AD20 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		4AE06DE41FD7D9ED00C4AD20 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		4AE06DE91FD7DC4500C4AD20 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addressable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				4A2D4A471FD734150086ED0D /* Assets.xcassets */,
 				4A94962F1FD7BFAD00BB95D3 /* Models */,
+				4AE06DE71FD7DBDF00C4AD20 /* Errors */,
 				4A2D4A401FD734150086ED0D /* AppDelegate.swift */,
 				4A2D4A421FD734150086ED0D /* ViewController.swift */,
 				4A2D4A441FD734150086ED0D /* Main.storyboard */,
@@ -180,6 +185,7 @@
 		4A9496301FD7C01C00BB95D3 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				4AE06DE81FD7DC3000C4AD20 /* Address */,
 				4AE06DE61FD7DA8700C4AD20 /* Name */,
 				4A9496331FD7C0FA00BB95D3 /* Dateable.swift */,
 			);
@@ -193,6 +199,22 @@
 				4A9496311FD7C03600BB95D3 /* Nameable.swift */,
 			);
 			path = Name;
+			sourceTree = "<group>";
+		};
+		4AE06DE71FD7DBDF00C4AD20 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		4AE06DE81FD7DC3000C4AD20 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				4AE06DE91FD7DC4500C4AD20 /* Address.swift */,
+				4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,11 +353,13 @@
 			files = (
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
 				4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */,
+				4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */,
 				4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */,
 				4A94962C1FD7BC7600BB95D3 /* Guest.swift in Sources */,
 				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,
 				4A94962E1FD7BF5C00BB95D3 /* Entrant.swift in Sources */,
 				4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */,
+				4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */,
 				4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */,
 				4A9496321FD7C03600BB95D3 /* Nameable.swift in Sources */,
 				4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */,

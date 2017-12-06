@@ -11,14 +11,16 @@ import Foundation
 class HourlyEmployee: Employee {
     let name: Name
     var birthday: Date
+    let address: Address
     
     var areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(name: Name, birthday: Date) {
+    init(name: Name, birthday: Date, address: Address) {
         self.name = name
         self.birthday = birthday
+        self.address = address
         
         areaAccess = [
             .amusement
@@ -36,8 +38,8 @@ class HourlyEmployee: Employee {
 }
 
 class HourlyEmployeeFood: HourlyEmployee {
-    override init(name: Name, birthday: Date) {
-        super.init(name: name, birthday: birthday)
+    override init(name: Name, birthday: Date, address: Address) {
+        super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [
             .kitchen
@@ -46,8 +48,8 @@ class HourlyEmployeeFood: HourlyEmployee {
 }
 
 class HourlyEmployeeRideServices: HourlyEmployee {
-    override init(name: Name, birthday: Date) {
-        super.init(name: name, birthday: birthday)
+    override init(name: Name, birthday: Date, address: Address) {
+        super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [
             .rideControl
@@ -56,8 +58,8 @@ class HourlyEmployeeRideServices: HourlyEmployee {
 }
 
 class HourlyEmployeeMaintenance: HourlyEmployee {
-    override init(name: Name, birthday: Date) {
-        super.init(name: nsame, birthday: birthday)
+    override init(name: Name, birthday: Date, address: Address) {
+        super.init(name: nsame, birthday: birthday, address: Address)
         
         areaAccess.append(contentsOf: [
             .kitchen,

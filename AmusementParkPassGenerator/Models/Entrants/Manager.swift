@@ -11,6 +11,7 @@ import Foundation
 class Manager: Employee {
     let name: Name
     var birthday: Date
+    let address: Address
     
     var areaAccess: [AreaAccess] = [
         .amusement,
@@ -29,8 +30,9 @@ class Manager: Employee {
         .merchandiseDiscount(discount: 25)
     ]
     
-    init(name: Name, birthday: Date) {
+    init(name: Name, birthday: Date, address: Address) {
         self.name = name
         self.birthday = birthday
+        self.address = address
     }
 }
