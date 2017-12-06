@@ -24,3 +24,8 @@ protocol Entrant: Dateable {
     var rideAccess: [RideAccess] { get set }
     var discountAccess: [DiscountAccess] { get set }
 }
+
+protocol Employee: Entrant, Nameable {
+    var firstName: String { get }
+    var lastName: String { get }
+}

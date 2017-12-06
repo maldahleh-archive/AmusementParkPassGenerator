@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HourlyEmployee: Entrant, Nameable {
+class HourlyEmployee: Employee {
     var firstName: String
     var lastName: String
     var birthday: Date
