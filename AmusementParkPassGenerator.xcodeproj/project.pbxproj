@@ -23,6 +23,7 @@
 		4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9496331FD7C0FA00BB95D3 /* Dateable.swift */; };
 		4AE06DE11FD7D4C200C4AD20 /* HourlyEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */; };
 		4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE21FD7D79A00C4AD20 /* Manager.swift */; };
+		4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE41FD7D9ED00C4AD20 /* Name.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		4A9496331FD7C0FA00BB95D3 /* Dateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dateable.swift; sourceTree = "<group>"; };
 		4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyEmployee.swift; sourceTree = "<group>"; };
 		4AE06DE21FD7D79A00C4AD20 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		4AE06DE41FD7D9ED00C4AD20 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +180,19 @@
 		4A9496301FD7C01C00BB95D3 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				4A9496311FD7C03600BB95D3 /* Nameable.swift */,
+				4AE06DE61FD7DA8700C4AD20 /* Name */,
 				4A9496331FD7C0FA00BB95D3 /* Dateable.swift */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		4AE06DE61FD7DA8700C4AD20 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				4AE06DE41FD7D9ED00C4AD20 /* Name.swift */,
+				4A9496311FD7C03600BB95D3 /* Nameable.swift */,
+			);
+			path = Name;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
+				4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */,
 				4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */,
 				4A94962C1FD7BC7600BB95D3 /* Guest.swift in Sources */,
 				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,

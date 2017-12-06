@@ -9,9 +9,8 @@
 import Foundation
 
 class Manager: Employee {
-    var firstName: String = ""
-    var lastName: String = ""
-    var birthday: Date = Date()
+    let name: Name
+    var birthday: Date
     
     var areaAccess: [AreaAccess] = [
         .amusement,
@@ -29,4 +28,9 @@ class Manager: Employee {
         .foodDiscount(discount: 25),
         .merchandiseDiscount(discount: 25)
     ]
+    
+    init(name: Name, birthday: Date) {
+        self.name = name
+        self.birthday = birthday
+    }
 }

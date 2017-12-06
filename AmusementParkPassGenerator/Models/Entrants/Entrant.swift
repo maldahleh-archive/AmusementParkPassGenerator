@@ -26,6 +26,5 @@ protocol Entrant: Dateable {
 }
 
 protocol Employee: Entrant, Nameable {
-    var firstName: String { get }
-    var lastName: String { get }
+    var name: Name { get }
 }

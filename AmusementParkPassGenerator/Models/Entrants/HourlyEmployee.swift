@@ -9,17 +9,15 @@
 import Foundation
 
 class HourlyEmployee: Employee {
-    var firstName: String
-    var lastName: String
+    let name: Name
     var birthday: Date
     
     var areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(firstName: String, lastName: String, birthday: Date) {
-        self.firstName = firstName
-        self.lastName = lastName
+    init(name: Name, birthday: Date) {
+        self.name = name
         self.birthday = birthday
         
         areaAccess = [
@@ -38,8 +36,8 @@ class HourlyEmployee: Employee {
 }
 
 class HourlyEmployeeFood: HourlyEmployee {
-    override init(firstName: String, lastName: String, birthday: Date) {
-        super.init(firstName: firstName, lastName: lastName, birthday: birthday)
+    override init(name: Name, birthday: Date) {
+        super.init(name: name, birthday: birthday)
         
         areaAccess.append(contentsOf: [
             .kitchen
@@ -48,8 +46,8 @@ class HourlyEmployeeFood: HourlyEmployee {
 }
 
 class HourlyEmployeeRideServices: HourlyEmployee {
-    override init(firstName: String, lastName: String, birthday: Date) {
-        super.init(firstName: firstName, lastName: lastName, birthday: birthday)
+    override init(name: Name, birthday: Date) {
+        super.init(name: name, birthday: birthday)
         
         areaAccess.append(contentsOf: [
             .rideControl
@@ -58,8 +56,8 @@ class HourlyEmployeeRideServices: HourlyEmployee {
 }
 
 class HourlyEmployeeMaintenance: HourlyEmployee {
-    override init(firstName: String, lastName: String, birthday: Date) {
-        super.init(firstName: firstName, lastName: lastName, birthday: birthday)
+    override init(name: Name, birthday: Date) {
+        super.init(name: nsame, birthday: birthday)
         
         areaAccess.append(contentsOf: [
             .kitchen,
