@@ -25,7 +25,4 @@ protocol Entrant: Dateable {
     var discountAccess: [DiscountAccess] { get set }
 }
 
-protocol Employee: Entrant, Nameable, Addressable {
-    var name: Name { get }
-    var address: Address { get }
-}
+protocol Employee: Entrant, Nameable, Addressable {}

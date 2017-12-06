@@ -10,7 +10,7 @@ import Foundation
 
 class Manager: Employee {
     let name: Name
-    var birthday: Date
+    let birthday: Date
     let address: Address
     
     var areaAccess: [AreaAccess] = [

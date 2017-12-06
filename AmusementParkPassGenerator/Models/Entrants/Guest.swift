@@ -9,7 +9,7 @@
 import Foundation
 
 class ClassicGuest: Entrant {
-    var birthday: Date
+    let birthday: Date
     
     let areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]

@@ -11,7 +11,7 @@ struct Name {
     let lastName: String
     
     var fullName: String {
-        return "\(firstName) \(secondName)"
+        return "\(firstName) \(lastName)"
     }
     
     init(firstName: String, lastName: String) throws {

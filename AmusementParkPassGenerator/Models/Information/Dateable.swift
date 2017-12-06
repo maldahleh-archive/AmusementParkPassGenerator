@@ -26,7 +26,7 @@ extension Date {
 }
 
 protocol Dateable {
-    var birthday: Date { get set }
+    var birthday: Date { get }
     
     func isBirthday() -> Bool
     func isUnderFive() -> Bool

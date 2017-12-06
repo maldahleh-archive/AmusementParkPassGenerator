@@ -10,7 +10,7 @@ import Foundation
 
 class HourlyEmployee: Employee {
     let name: Name
-    var birthday: Date
+    let birthday: Date
     let address: Address
     
     var areaAccess: [AreaAccess]
@@ -59,7 +59,7 @@ class HourlyEmployeeRideServices: HourlyEmployee {
 
 class HourlyEmployeeMaintenance: HourlyEmployee {
     override init(name: Name, birthday: Date, address: Address) {
-        super.init(name: nsame, birthday: birthday, address: Address)
+        super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [
             .kitchen,
