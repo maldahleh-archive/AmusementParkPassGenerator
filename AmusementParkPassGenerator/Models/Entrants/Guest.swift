@@ -53,7 +53,7 @@ class ChildGuest: ClassicGuest {
         try! super.init(birthday: createdBirthday)
      
         if !isUnderFive() {
-            // FIXME: Throw error
+            throw DataError.overAgeOfFive
         }
     }
 }

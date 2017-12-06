@@ -26,6 +26,7 @@
 		4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE41FD7D9ED00C4AD20 /* Name.swift */; };
 		4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE91FD7DC4500C4AD20 /* Address.swift */; };
 		4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */; };
+		4AE06DEE1FD7DFE200C4AD20 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DED1FD7DFE200C4AD20 /* DataError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		4AE06DE41FD7D9ED00C4AD20 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		4AE06DE91FD7DC4500C4AD20 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addressable.swift; sourceTree = "<group>"; };
+		4AE06DED1FD7DFE200C4AD20 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		4AE06DE71FD7DBDF00C4AD20 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				4AE06DED1FD7DFE200C4AD20 /* DataError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE06DEE1FD7DFE200C4AD20 /* DataError.swift in Sources */,
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
 				4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */,
 				4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */,

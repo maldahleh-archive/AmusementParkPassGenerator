@@ -14,19 +14,19 @@ struct Address {
     
     init(streetAddress: String, city: String, state: String, zipCode: String) throws {
         if streetAddress.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "Street Address")
         }
         
         if city.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "City")
         }
         
         if state.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "State")
         }
         
         if zipCode.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "Zip Code")
         }
         
         self.streetAddress = streetAddress

@@ -16,11 +16,11 @@ struct Name {
     
     init(firstName: String, lastName: String) throws {
         if firstName.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "First Name")
         }
         
         if lastName.isEmpty {
-            // FIXME: Throw error
+            throw DataError.missingInformation(missing: "Last Name")
         }
         
         self.firstName = firstName
