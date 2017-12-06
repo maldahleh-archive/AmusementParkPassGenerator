@@ -8,13 +8,6 @@
 
 import Foundation
 
-protocol Dateable {
-    var birthday: Date { get set }
-    
-    func isBirthday() throws -> Bool
-    func isUnderFive() throws -> Bool
-}
-
 extension Date {
     func ageComponents() -> DateComponents {
         let currentDate = Date()
@@ -30,6 +23,13 @@ extension Date {
         
         return dateComponents
     }
+}
+
+protocol Dateable {
+    var birthday: Date { get set }
+    
+    func isBirthday() throws -> Bool
+    func isUnderFive() throws -> Bool
 }
 
 extension Dateable {
