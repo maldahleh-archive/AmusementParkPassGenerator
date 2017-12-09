@@ -18,58 +18,134 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrb-eZ-2Kt" userLabel="MainRoleView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-3Y-wPt" userLabel="MainStack">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-kW-2E3" userLabel="MainRoleStack">
-                                        <rect key="frame" x="0.0" y="40" width="768" height="80"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrb-eZ-2Kt" userLabel="MainRoleView">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78z-FS-HTI" userLabel="GuestButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="80"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <state key="normal" title="Guest">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-g7-AjX" userLabel="EmployeeButton">
-                                                <rect key="frame" x="194.5" y="0.0" width="184.5" height="80"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                <state key="normal" title="Employee">
-                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-q1-Wti" userLabel="ManagerButton">
-                                                <rect key="frame" x="389" y="0.0" width="184.5" height="80"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                <state key="normal" title="Manager">
-                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
-                                                <rect key="frame" x="583.5" y="0.0" width="184.5" height="80"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                <state key="normal" title="Vendor">
-                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-kW-2E3" userLabel="MainRoleStack">
+                                                <rect key="frame" x="0.0" y="40" width="768" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78z-FS-HTI" userLabel="GuestButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <state key="normal" title="Guest">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-g7-AjX" userLabel="EmployeeButton">
+                                                        <rect key="frame" x="155.5" y="0.0" width="145.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <state key="normal" title="Employee">
+                                                            <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-q1-Wti" userLabel="ManagerButton">
+                                                        <rect key="frame" x="311" y="0.0" width="146" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <state key="normal" title="Manager">
+                                                            <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-vu-B2l" userLabel="ContractButton">
+                                                        <rect key="frame" x="467" y="0.0" width="145.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <state key="normal" title="Contract">
+                                                            <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
+                                                        <rect key="frame" x="622.5" y="0.0" width="145.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                        <state key="normal" title="Vendor">
+                                                            <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" red="0.52185440063476562" green="0.43099230527877808" blue="0.65100055932998657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BQV-kW-2E3" secondAttribute="trailing" id="72g-4z-act"/>
+                                            <constraint firstAttribute="height" constant="120" id="757-8A-EQ7"/>
+                                            <constraint firstItem="BQV-kW-2E3" firstAttribute="leading" secondItem="Zrb-eZ-2Kt" secondAttribute="leading" id="ZNy-dB-K0r"/>
+                                            <constraint firstAttribute="bottom" secondItem="BQV-kW-2E3" secondAttribute="bottom" id="aOC-eC-2ds"/>
+                                            <constraint firstItem="BQV-kW-2E3" firstAttribute="top" secondItem="Zrb-eZ-2Kt" secondAttribute="top" constant="40" id="xVg-O2-YzF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqV-aI-ruU" userLabel="SecondaryRoleView">
+                                        <rect key="frame" x="0.0" y="120" width="768" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9DG-eM-v8e" userLabel="SecondaryRoleStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUJ-S8-BEi" userLabel="SecondaryButtonOne">
+                                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Child">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmE-dy-Tyf" userLabel="SecondaryButtonTwo">
+                                                        <rect key="frame" x="154.5" y="0.0" width="149.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="Adult">
+                                                            <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGy-zt-Vdj" userLabel="SecondaryButtonThree">
+                                                        <rect key="frame" x="309" y="0.0" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="VIP">
+                                                            <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu8-1e-Qor" userLabel="SecondaryButtonFour">
+                                                        <rect key="frame" x="464" y="0.0" width="149.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="Senior">
+                                                            <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcE-7e-iZD" userLabel="SecondaryButtonFive">
+                                                        <rect key="frame" x="618.5" y="0.0" width="149.5" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="Season">
+                                                            <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.23929840326309204" green="0.21166208386421204" blue="0.27843725681304932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="9DG-eM-v8e" firstAttribute="leading" secondItem="AqV-aI-ruU" secondAttribute="leading" id="2wx-PV-m58"/>
+                                            <constraint firstItem="9DG-eM-v8e" firstAttribute="top" secondItem="AqV-aI-ruU" secondAttribute="top" id="6N1-1G-vsI"/>
+                                            <constraint firstAttribute="bottom" secondItem="9DG-eM-v8e" secondAttribute="bottom" id="bcg-j8-raU"/>
+                                            <constraint firstAttribute="height" constant="80" id="gcg-oa-U7c"/>
+                                            <constraint firstAttribute="trailing" secondItem="9DG-eM-v8e" secondAttribute="trailing" id="m0b-r3-EWf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmb-1h-VNj" userLabel="MainView">
+                                        <rect key="frame" x="0.0" y="200" width="768" height="824"/>
+                                        <color key="backgroundColor" red="0.85493952035903931" green="0.83916682004928589" blue="0.87058562040328979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.52185440063476562" green="0.43099230527877808" blue="0.65100055932998657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="BQV-kW-2E3" secondAttribute="trailing" id="72g-4z-act"/>
-                                    <constraint firstAttribute="height" constant="120" id="757-8A-EQ7"/>
-                                    <constraint firstItem="BQV-kW-2E3" firstAttribute="leading" secondItem="Zrb-eZ-2Kt" secondAttribute="leading" id="ZNy-dB-K0r"/>
-                                    <constraint firstAttribute="bottom" secondItem="BQV-kW-2E3" secondAttribute="bottom" id="aOC-eC-2ds"/>
-                                    <constraint firstItem="BQV-kW-2E3" firstAttribute="top" secondItem="Zrb-eZ-2Kt" secondAttribute="top" constant="40" id="xVg-O2-YzF"/>
+                                    <constraint firstAttribute="bottom" secondItem="xmb-1h-VNj" secondAttribute="bottom" id="7NE-52-GFX"/>
+                                    <constraint firstItem="xmb-1h-VNj" firstAttribute="top" secondItem="AqV-aI-ruU" secondAttribute="bottom" id="9V9-69-nuX"/>
+                                    <constraint firstAttribute="trailing" secondItem="xmb-1h-VNj" secondAttribute="trailing" id="aL9-Dc-9Qv"/>
+                                    <constraint firstItem="xmb-1h-VNj" firstAttribute="leading" secondItem="Ixq-3Y-wPt" secondAttribute="leading" id="p0i-KG-HFN"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bqz-zr-foB"/>
-                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hr3-3F-RLB"/>
-                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zQV-a7-Rmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ixq-3Y-wPt" secondAttribute="bottom" id="9Yp-mT-GzF"/>
+                            <constraint firstItem="Ixq-3Y-wPt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qf5-QX-HHX"/>
+                            <constraint firstItem="Ixq-3Y-wPt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R2Y-d6-MZG"/>
+                            <constraint firstItem="Ixq-3Y-wPt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UDG-fK-eN1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
