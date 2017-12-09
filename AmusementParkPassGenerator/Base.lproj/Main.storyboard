@@ -17,12 +17,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrb-eZ-2Kt" userLabel="MainRoleView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-kW-2E3" userLabel="MainRoleStack">
+                                        <rect key="frame" x="0.0" y="40" width="768" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78z-FS-HTI" userLabel="GuestButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="Guest">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-g7-AjX" userLabel="EmployeeButton">
+                                                <rect key="frame" x="194.5" y="0.0" width="184.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <state key="normal" title="Employee">
+                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-q1-Wti" userLabel="ManagerButton">
+                                                <rect key="frame" x="389" y="0.0" width="184.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <state key="normal" title="Manager">
+                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
+                                                <rect key="frame" x="583.5" y="0.0" width="184.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <state key="normal" title="Vendor">
+                                                    <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.52185440063476562" green="0.43099230527877808" blue="0.65100055932998657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BQV-kW-2E3" secondAttribute="trailing" id="72g-4z-act"/>
+                                    <constraint firstAttribute="height" constant="120" id="757-8A-EQ7"/>
+                                    <constraint firstItem="BQV-kW-2E3" firstAttribute="leading" secondItem="Zrb-eZ-2Kt" secondAttribute="leading" id="ZNy-dB-K0r"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQV-kW-2E3" secondAttribute="bottom" id="aOC-eC-2ds"/>
+                                    <constraint firstItem="BQV-kW-2E3" firstAttribute="top" secondItem="Zrb-eZ-2Kt" secondAttribute="top" constant="40" id="xVg-O2-YzF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bqz-zr-foB"/>
+                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hr3-3F-RLB"/>
+                            <constraint firstItem="Zrb-eZ-2Kt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zQV-a7-Rmg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.59375" y="38.671875"/>
         </scene>
     </scenes>
 </document>
