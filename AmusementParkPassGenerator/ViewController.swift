@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     var mainBarSelection: MainEntrantUIBar = MainEntrantUIBar.guest
     
+    @IBOutlet var mainBarButtons: [UIButton]!
+    @IBOutlet weak var secondaryRoleBar: UIView!
+    
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var dobTextField: UITextField!
     @IBOutlet weak var ssnLabel: UILabel!
@@ -35,13 +38,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    // MARK: Actions for buttons
+    // MARK: Role bars
     @IBAction func entrantGroupButtonTapped(_ sender: UIButton) {
         if let mainBarSelection = MainEntrantUIBar(rawValue: sender.tag) {
             self.mainBarSelection = mainBarSelection
+            
+            updateSecodaryBarWith(self.mainBarSelection)
         }
     }
     
+    func updateSecodaryBarWith(_ role: MainEntrantUIBar) {
+        secondaryRoleBar.isHidden = false
+        updateMainButtonsWith(mainBarSelection)
+        
+        if role == .manager {
+            secondaryRoleBar.isHidden = true
+        }
+    }
     
     // MARK: UI enabling/disabling
     func updateFieldInteractivityFor(_ entrant: Entrant) {
@@ -56,6 +69,14 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateMainButtonsWith(_ selected: MainEntrantUIBar) {
+        for button in mainBarButtons {
+            let selected = (button.tag == mainBarSelection.rawValue)
+            
+            setSelectedTo(selected, for: button, withType: .main)
+        }
+    }
+    
     func setEnabledTo(_ enabled: Bool, for objects: [AnyObject]) {
         for object in objects {
             if let textField = object as? UITextField {
@@ -65,6 +86,19 @@ class ViewController: UIViewController {
             if let label = object as? UILabel {
                 setEnabledTo(enabled, for: label)
             }
+        }
+    }
+    
+    func setSelectedTo(_ selected: Bool, for button: UIButton, withType type: ButtonType) {
+        // FIXME: Implement second button type
+        switch type {
+        case .main:
+            if selected {
+                button.setTitleColor(Colours.mainBarEnabledColour, for: .normal)
+            } else {
+                button.setTitleColor(Colours.mainBarDisabledColour, for: .normal)
+            }
+        case .secondary: return
         }
     }
     
@@ -84,5 +118,12 @@ class ViewController: UIViewController {
         } else {
             label.backgroundColor = Colours.disabledLabelColour
         }
+    }
+}
+
+extension ViewController {
+    enum ButtonType {
+        case main
+        case secondary
     }
 }

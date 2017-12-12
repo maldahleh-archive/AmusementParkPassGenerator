@@ -13,4 +13,7 @@ class Colours {
     
     static let enabledLabelColour = UIColor(red: 94.0/255.0, green: 92.0/255.0, blue: 96.0/255.0, alpha: 1.0)
     static let disabledLabelColour = UIColor(red: 156.0/255.0, green: 153.0/255.0, blue: 159.0/255.0, alpha: 1.0)
+    
+    static let mainBarEnabledColour = UIColor(red: 206.0/255.0, green: 194.0/255.0, blue: 223.0/255.0, alpha: 1.0)
+    static let mainBarDisabledColour = UIColor.white
 }

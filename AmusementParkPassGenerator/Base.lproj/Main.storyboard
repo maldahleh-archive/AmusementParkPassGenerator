@@ -68,7 +68,7 @@
                                                             <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1T-nl-EOf"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
                                                         <rect key="frame" x="827" y="0.0" width="197" height="80"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                         <state key="normal" title="Vendor">
@@ -439,6 +439,7 @@
                         <outlet property="lastNameTextField" destination="wX2-TN-Xpe" id="RIS-mw-NUC"/>
                         <outlet property="projectNoLabel" destination="XWK-g2-Oah" id="EYi-Uj-FAf"/>
                         <outlet property="projectNoTextField" destination="vqP-V2-fuD" id="65H-3O-vQA"/>
+                        <outlet property="secondaryRoleBar" destination="AqV-aI-ruU" id="9Rj-jg-4lR"/>
                         <outlet property="ssnLabel" destination="opt-1w-Sta" id="SV4-nY-VIg"/>
                         <outlet property="ssnTextField" destination="8ju-1s-iBL" id="mM0-gK-HxE"/>
                         <outlet property="stateTextField" destination="Fqb-Lq-Q9x" id="wJX-T2-GRM"/>
@@ -450,6 +451,11 @@
                         <outletCollection property="addressLabels" destination="WCn-bY-aE8" collectionClass="NSMutableArray" id="CpF-9A-QtA"/>
                         <outletCollection property="nameLabels" destination="wYT-ou-s77" collectionClass="NSMutableArray" id="r9N-rH-vFL"/>
                         <outletCollection property="nameLabels" destination="spR-X8-dm7" collectionClass="NSMutableArray" id="fl9-kQ-gCT"/>
+                        <outletCollection property="mainBarButtons" destination="78z-FS-HTI" collectionClass="NSMutableArray" id="gdf-IV-h6L"/>
+                        <outletCollection property="mainBarButtons" destination="agD-g7-AjX" collectionClass="NSMutableArray" id="DgR-rR-idL"/>
+                        <outletCollection property="mainBarButtons" destination="3pM-q1-Wti" collectionClass="NSMutableArray" id="yw4-H2-OcJ"/>
+                        <outletCollection property="mainBarButtons" destination="7dj-vu-B2l" collectionClass="NSMutableArray" id="MVV-0v-nqP"/>
+                        <outletCollection property="mainBarButtons" destination="Cqs-PV-ueG" collectionClass="NSMutableArray" id="wKz-gT-vFt"/>
                         <segue destination="a1E-T1-Q93" kind="show" identifier="toPassTester" id="AQe-4h-7bM"/>
                     </connections>
                 </viewController>
