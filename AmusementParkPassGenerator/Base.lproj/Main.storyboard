@@ -102,6 +102,9 @@
                                                         <state key="normal" title="Child">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="secondaryBarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BmJ-94-6sb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmE-dy-Tyf" userLabel="SecondaryButtonTwo">
                                                         <rect key="frame" x="206" y="0.0" width="200.5" height="80"/>
@@ -109,6 +112,9 @@
                                                         <state key="normal" title="Adult">
                                                             <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="secondaryBarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hx-pX-4nc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGy-zt-Vdj" userLabel="SecondaryButtonThree">
                                                         <rect key="frame" x="411.5" y="0.0" width="201" height="80"/>
@@ -116,6 +122,9 @@
                                                         <state key="normal" title="VIP">
                                                             <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="secondaryBarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEH-Kd-mFE"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu8-1e-Qor" userLabel="SecondaryButtonFour">
                                                         <rect key="frame" x="617.5" y="0.0" width="200.5" height="80"/>
@@ -123,6 +132,9 @@
                                                         <state key="normal" title="Senior">
                                                             <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="secondaryBarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0W-hU-lsD"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcE-7e-iZD" userLabel="SecondaryButtonFive">
                                                         <rect key="frame" x="823" y="0.0" width="201" height="80"/>
@@ -130,6 +142,9 @@
                                                         <state key="normal" title="Season">
                                                             <color key="titleColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="secondaryBarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFs-Jb-KxE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -182,12 +197,12 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opt-1w-Sta" userLabel="SSNLabel">
                                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="24"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" red="0.61179274319999999" green="0.5999635458" blue="0.6235276461" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.52165848020000005" green="0.4940136671" blue="0.56471067669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  ### - ## - ####" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ju-1s-iBL" userLabel="SSNField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  ### - ## - ####" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ju-1s-iBL" userLabel="SSNField">
                                                                         <rect key="frame" x="0.0" y="34" width="315" height="30"/>
-                                                                        <color key="backgroundColor" red="0.85493952039999999" green="0.83916681999999998" blue="0.87058562039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>

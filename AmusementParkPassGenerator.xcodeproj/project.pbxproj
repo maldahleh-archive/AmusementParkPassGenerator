@@ -12,6 +12,8 @@
 		4A2D4A461FD734150086ED0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A441FD734150086ED0D /* Main.storyboard */; };
 		4A2D4A481FD734150086ED0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A471FD734150086ED0D /* Assets.xcassets */; };
 		4A2D4A4B1FD734150086ED0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A491FD734150086ED0D /* LaunchScreen.storyboard */; };
+		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
+		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
 		4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94D1FD735680059F15A /* RideAccess.swift */; };
 		4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB9501FD737270059F15A /* DiscountAccess.swift */; };
@@ -29,7 +31,6 @@
 		4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DE91FD7DC4500C4AD20 /* Address.swift */; };
 		4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */; };
 		4AE06DEE1FD7DFE200C4AD20 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE06DED1FD7DFE200C4AD20 /* DataError.swift */; };
-		4AE54F681FE05BE600DD77CE /* UIHelperEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE54F671FE05BE600DD77CE /* UIHelperEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4A2D4A4C1FD734150086ED0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A2D4A511FD734150086ED0D /* AmusementParkPassGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D4A5C1FD734150086ED0D /* AmusementParkPassGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
+		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
 		4A7EB94D1FD735680059F15A /* RideAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAccess.swift; sourceTree = "<group>"; };
 		4A7EB9501FD737270059F15A /* DiscountAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountAccess.swift; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		4AE06DE91FD7DC4500C4AD20 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4AE06DEB1FD7DCE200C4AD20 /* Addressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addressable.swift; sourceTree = "<group>"; };
 		4AE06DED1FD7DFE200C4AD20 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
-		4AE54F671FE05BE600DD77CE /* UIHelperEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelperEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,19 +128,44 @@
 			isa = PBXGroup;
 			children = (
 				4A2D4A471FD734150086ED0D /* Assets.xcassets */,
+				4A770ABC1FE087230033B594 /* ViewControllers */,
 				4A94962F1FD7BFAD00BB95D3 /* Models */,
 				4AA968221FD7E87500F1CBC5 /* Swipe */,
 				4AE06DE71FD7DBDF00C4AD20 /* Errors */,
 				4A2D4A401FD734150086ED0D /* AppDelegate.swift */,
-				4A2D4A421FD734150086ED0D /* ViewController.swift */,
 				4A2D4A441FD734150086ED0D /* Main.storyboard */,
 				4A2D4A491FD734150086ED0D /* LaunchScreen.storyboard */,
 				4A2D4A4C1FD734150086ED0D /* Info.plist */,
-				4ACCF6CD1FDDC50D0057E3E6 /* PassTesterViewController.swift */,
-				4A94D63B1FDFDDF300437E54 /* Colours.swift */,
-				4AE54F671FE05BE600DD77CE /* UIHelperEnum.swift */,
 			);
 			path = AmusementParkPassGenerator;
+			sourceTree = "<group>";
+		};
+		4A770ABC1FE087230033B594 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A770ABF1FE087670033B594 /* Selections */,
+				4A770ABE1FE087490033B594 /* Utilities */,
+				4A2D4A421FD734150086ED0D /* ViewController.swift */,
+				4ACCF6CD1FDDC50D0057E3E6 /* PassTesterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4A770ABE1FE087490033B594 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A94D63B1FDFDDF300437E54 /* Colours.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4A770ABF1FE087670033B594 /* Selections */ = {
+			isa = PBXGroup;
+			children = (
+				4A770AC31FE087FB0033B594 /* MainBarSelection.swift */,
+				4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */,
+			);
+			path = Selections;
 			sourceTree = "<group>";
 		};
 		4A7EB94A1FD734F90059F15A /* Access */ = {
@@ -352,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE06DEE1FD7DFE200C4AD20 /* DataError.swift in Sources */,
+				4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */,
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
 				4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */,
 				4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */,
@@ -359,6 +387,7 @@
 				4AA968261FD7E9F300F1CBC5 /* Swiper.swift in Sources */,
 				4A7EB9511FD737270059F15A /* DiscountAccess.swift in Sources */,
 				4AA968281FD7EC7C00F1CBC5 /* GenericAccess.swift in Sources */,
+				4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */,
 				4A94962C1FD7BC7600BB95D3 /* Guest.swift in Sources */,
 				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,
 				4A94962E1FD7BF5C00BB95D3 /* Entrant.swift in Sources */,
@@ -369,7 +398,6 @@
 				4A9496321FD7C03600BB95D3 /* Nameable.swift in Sources */,
 				4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */,
 				4AE06DE11FD7D4C200C4AD20 /* HourlyEmployee.swift in Sources */,
-				4AE54F681FE05BE600DD77CE /* UIHelperEnum.swift in Sources */,
 				4A2D4A411FD734150086ED0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

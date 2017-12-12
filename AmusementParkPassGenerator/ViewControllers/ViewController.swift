@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var mainBarSelection: MainEntrantUIBar = MainEntrantUIBar.guest
+    let selectionHandler = SelectionHandler()
     
     @IBOutlet var mainBarButtons: [UIButton]!
     @IBOutlet var secondaryBarButtons: [UIButton]!
@@ -41,23 +41,44 @@ class ViewController: UIViewController {
     
     // MARK: Role bars
     @IBAction func entrantGroupButtonTapped(_ sender: UIButton) {
-        if let mainBarSelection = MainEntrantUIBar(rawValue: sender.tag) {
-            self.mainBarSelection = mainBarSelection
+        if let mainBarSelection = MainBarSelection(rawValue: sender.tag) {
+            reset()
             
-            updateSecodaryBarWith(self.mainBarSelection)
+            selectionHandler.mainBarSelection = mainBarSelection
+            selectionHandler.secondarySelection = 0
+            
+            updateSecodaryBarWith(mainBarSelection)
+            updateFieldInteractivityFor(selectionHandler.mainBarSelection, withSecondarySelection: selectionHandler.secondarySelection)
         }
     }
     
-    func updateSecodaryBarWith(_ role: MainEntrantUIBar) {
+    @IBAction func secondaryBarButtonTapped(_ sender: UIButton) {
+        reset()
+        
+        selectionHandler.secondarySelection = sender.tag
+        setButtonSelectedWithTag(sender.tag)
+        
+        updateFieldInteractivityFor(selectionHandler.mainBarSelection, withSecondarySelection: selectionHandler.secondarySelection)
+    }
+    
+    func setButtonSelectedWithTag(_ tag: Int) {
+        for button in secondaryBarButtons {
+            let selected = (button.tag == tag)
+            
+            setSelectedTo(selected, for: button, withType: .secondary)
+        }
+    }
+    
+    func updateSecodaryBarWith(_ role: MainBarSelection) {
         secondaryRoleBar.isHidden = false
-        updateMainButtonsFor(mainBarSelection)
+        updateMainButtonsFor(role)
         
         if role == .manager {
             secondaryRoleBar.isHidden = true
             return
         }
         
-        var secondaryRoleBarValues = mainBarSelection.secondaryValues
+        var secondaryRoleBarValues = role.secondaryValues
         var isInitial: Bool? = nil
         
         for button in secondaryBarButtons {
@@ -80,24 +101,63 @@ class ViewController: UIViewController {
     }
     
     // MARK: UI enabling/disabling
-    func updateFieldInteractivityFor(_ entrant: Entrant) {
-        if entrant is Nameable {
-            setEnabledTo(true, for: nameLabels)
-            setEnabledTo(true, for: [firstNameTextField, lastNameTextField])
+    func updateFieldInteractivityFor(_ entrant: MainBarSelection, withSecondarySelection selection: Int) {
+        var labelsToActivate: [UILabel] = []
+        var fieldsToActivate: [UITextField] = []
+        
+        func addNameInformation() {
+            labelsToActivate += nameLabels
+            fieldsToActivate += [firstNameTextField, lastNameTextField]
         }
         
-        if entrant is Addressable {
-            setEnabledTo(true, for: addressLabels)
-            setEnabledTo(true, for: [streetAddressTextField, cityTextField, stateTextField, zipTextField])
+        func addAddressInformation() {
+            labelsToActivate += addressLabels
+            fieldsToActivate += [streetAddressTextField, cityTextField, stateTextField, zipTextField]
         }
+        
+        switch entrant {
+        case .guest where selection == 3, .vendor:
+            addNameInformation()
+        case .guest where selection == 4, .employee, .manager, .contract:
+            addNameInformation()
+            addAddressInformation()
+        default: return
+        }
+        
+        if entrant == .vendor {
+            setEnabledTo(true, for: [companyLabel, companyTextField])
+            
+            companyTextField.text = entrant.secondaryValues[selection]
+            companyTextField.isEnabled = false
+        } else if entrant == .contract {
+            setEnabledTo(true, for: [projectNoLabel, projectNoTextField])
+            
+            projectNoTextField.text = entrant.secondaryValues[selection]
+            projectNoTextField.isEnabled = false
+        }
+        
+        setEnabledTo(true, for: labelsToActivate)
+        setEnabledTo(true, for: fieldsToActivate)
     }
     
-    func updateMainButtonsFor(_ selection: MainEntrantUIBar) {
+    func updateMainButtonsFor(_ selection: MainBarSelection) {
         for button in mainBarButtons {
             let selected = (button.tag == selection.rawValue)
             
             setSelectedTo(selected, for: button, withType: .main)
         }
+    }
+    
+    func reset() {
+        let resetFields: [UITextField] = [dobTextField, ssnTextField, projectNoTextField, companyTextField, firstNameTextField, lastNameTextField, streetAddressTextField, cityTextField, stateTextField, zipTextField]
+        let resetLabels = [dobLabel, ssnLabel, companyLabel, projectNoLabel] + nameLabels + addressLabels
+        
+        clearTextFor(resetFields)
+        setEnabledTo(false, for: resetFields)
+        setEnabledTo(false, for: resetLabels)
+        
+        let keepEnabled: [AnyObject] = [dobTextField, dobLabel, ssnTextField, ssnLabel]
+        setEnabledTo(true, for: keepEnabled)
     }
 }
 
@@ -105,6 +165,12 @@ extension ViewController {
     enum ButtonType {
         case main
         case secondary
+    }
+    
+    func clearTextFor(_ fields: [UITextField]) {
+        for field in fields {
+            field.text = ""
+        }
     }
     
     func setEnabledTo(_ enabled: Bool, for objects: [AnyObject]) {
@@ -148,9 +214,9 @@ extension ViewController {
     
     func setEnabledTo(_ enabled: Bool, for label: UILabel) {
         if enabled {
-            label.backgroundColor = Colours.enabledLabelColour
+            label.textColor = Colours.enabledLabelColour
         } else {
-            label.backgroundColor = Colours.disabledLabelColour
+            label.textColor = Colours.disabledLabelColour
         }
     }
 }
