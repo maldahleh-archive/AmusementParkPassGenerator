@@ -34,6 +34,9 @@
                                                         <state key="normal" title="Guest">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCk-4I-FFy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agD-g7-AjX" userLabel="EmployeeButton">
                                                         <rect key="frame" x="207" y="0.0" width="196.5" height="80"/>
@@ -41,6 +44,9 @@
                                                         <state key="normal" title="Employee">
                                                             <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oKK-nA-8Tj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pM-q1-Wti" userLabel="ManagerButton">
                                                         <rect key="frame" x="413.5" y="0.0" width="197" height="80"/>
@@ -48,6 +54,9 @@
                                                         <state key="normal" title="Manager">
                                                             <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VT-aP-o3s"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-vu-B2l" userLabel="ContractButton">
                                                         <rect key="frame" x="620.5" y="0.0" width="196.5" height="80"/>
@@ -55,6 +64,9 @@
                                                         <state key="normal" title="Contract">
                                                             <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1T-nl-EOf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-PV-ueG" userLabel="VendorButton">
                                                         <rect key="frame" x="827" y="0.0" width="197" height="80"/>
@@ -62,6 +74,9 @@
                                                         <state key="normal" title="Vendor">
                                                             <color key="titleColor" red="0.80798190830000005" green="0.76061803100000003" blue="0.87451797720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="entrantGroupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynq-eg-E1m"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
