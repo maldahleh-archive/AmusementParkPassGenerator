@@ -15,15 +15,15 @@ class ViewController: UIViewController {
     }
     
     // MARK: UI Helper methods
-    func setActivityTo(_ active: Bool, for field: UITextField) {
-        setActivityTo(active, for: [field])
+    func setEnabledTo(_ enabled: Bool, for field: UITextField) {
+        setActivityTo(enabled, for: [field])
     }
     
-    func setActivityTo(_ active: Bool, for fields: [UITextField]) {
+    func setEnabledTo(_ enabled: Bool, for fields: [UITextField]) {
         for field in fields {
-            field.isEnabled = active
+            field.isEnabled = enabled
             
-            if active {
+            if enabled {
                 field.backgroundColor = .white
             } else {
                 field.backgroundColor = Colours.mainBackgroundColour
