@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     let selectionHandler = SelectionHandler()
+    var moveViewForKeyboard = false
     
     @IBOutlet var mainBarButtons: [UIButton]!
     @IBOutlet var secondaryBarButtons: [UIButton]!
@@ -37,6 +38,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setSelfAsDelegateFor([streetAddressTextField, cityTextField, stateTextField, zipTextField])
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: Role bars
@@ -159,12 +169,60 @@ class ViewController: UIViewController {
         let keepEnabled: [AnyObject] = [dobTextField, dobLabel, ssnTextField, ssnLabel]
         setEnabledTo(true, for: keepEnabled)
     }
+    
+    // MARK: Keyboard
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveViewForKeyboard = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        moveViewForKeyboard = false
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let info = notification.userInfo, let keyboardFrame = info[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = keyboardFrame.cgRectValue
+            
+            if moveViewForKeyboard {
+                self.view.frame.origin.y -= frame.size.height
+            
+                UIView.animate(withDuration: 0.8) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        if let info = notification.userInfo, let keyboardFrame = info[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = keyboardFrame.cgRectValue
+        
+            if moveViewForKeyboard {
+                self.view.frame.origin.y += frame.size.height
+                
+                UIView.animate(withDuration: 0.8) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension ViewController {
     enum ButtonType {
         case main
         case secondary
+    }
+    
+    func setSelfAsDelegateFor(_ fields: [UITextField]) {
+        for field in fields {
+            field.delegate = self
+        }
     }
     
     func clearTextFor(_ fields: [UITextField]) {
