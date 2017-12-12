@@ -13,4 +13,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: UI Helper methods
+    func setActivityTo(_ active: Bool, for field: UITextField) {
+        setActivityTo(active, for: [field])
+    }
+    
+    func setActivityTo(_ active: Bool, for fields: [UITextField]) {
+        for field in fields {
+            field.isEnabled = active
+            
+            if active {
+                field.backgroundColor = .white
+            } else {
+                field.backgroundColor = Colours.mainBackgroundColour
+            }
+        }
+    }
 }
