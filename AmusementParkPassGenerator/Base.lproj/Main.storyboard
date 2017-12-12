@@ -456,6 +456,11 @@
                         <outletCollection property="mainBarButtons" destination="3pM-q1-Wti" collectionClass="NSMutableArray" id="yw4-H2-OcJ"/>
                         <outletCollection property="mainBarButtons" destination="7dj-vu-B2l" collectionClass="NSMutableArray" id="MVV-0v-nqP"/>
                         <outletCollection property="mainBarButtons" destination="Cqs-PV-ueG" collectionClass="NSMutableArray" id="wKz-gT-vFt"/>
+                        <outletCollection property="secondaryBarButtons" destination="hUJ-S8-BEi" collectionClass="NSMutableArray" id="EF3-Sp-Qg9"/>
+                        <outletCollection property="secondaryBarButtons" destination="QmE-dy-Tyf" collectionClass="NSMutableArray" id="ObZ-fU-tCs"/>
+                        <outletCollection property="secondaryBarButtons" destination="tGy-zt-Vdj" collectionClass="NSMutableArray" id="9PR-uo-Dat"/>
+                        <outletCollection property="secondaryBarButtons" destination="cu8-1e-Qor" collectionClass="NSMutableArray" id="0Be-Yv-Ijo"/>
+                        <outletCollection property="secondaryBarButtons" destination="bcE-7e-iZD" collectionClass="NSMutableArray" id="SOh-aH-oaO"/>
                         <segue destination="a1E-T1-Q93" kind="show" identifier="toPassTester" id="AQe-4h-7bM"/>
                     </connections>
                 </viewController>

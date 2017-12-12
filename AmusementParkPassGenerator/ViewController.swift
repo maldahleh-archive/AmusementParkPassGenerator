@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var mainBarSelection: MainEntrantUIBar = MainEntrantUIBar.guest
     
     @IBOutlet var mainBarButtons: [UIButton]!
+    @IBOutlet var secondaryBarButtons: [UIButton]!
     @IBOutlet weak var secondaryRoleBar: UIView!
     
     @IBOutlet weak var dobLabel: UILabel!
@@ -53,6 +54,28 @@ class ViewController: UIViewController {
         
         if role == .manager {
             secondaryRoleBar.isHidden = true
+            return
+        }
+        
+        var secondaryRoleBarValues = mainBarSelection.secondaryValues
+        var isInitial: Bool? = nil
+        
+        for button in secondaryBarButtons {
+            if !secondaryRoleBarValues.isEmpty {
+                button.isHidden = false
+                button.setTitle(secondaryRoleBarValues[0], for: .normal)
+                
+                if isInitial == nil {
+                    setSelectedTo(true, for: button, withType: .secondary)
+                    isInitial = false
+                } else {
+                    setSelectedTo(false, for: button, withType: .secondary)
+                }
+                
+                secondaryRoleBarValues.remove(at: 0)
+            } else {
+                button.isHidden = true
+            }
         }
     }
     
@@ -97,7 +120,6 @@ extension ViewController {
     }
     
     func setSelectedTo(_ selected: Bool, for button: UIButton, withType type: ButtonType) {
-        // FIXME: Implement second button type
         switch type {
         case .main:
             if selected {
@@ -105,7 +127,12 @@ extension ViewController {
             } else {
                 button.setTitleColor(Colours.mainBarDisabledColour, for: .normal)
             }
-        case .secondary: return
+        case .secondary:
+            if selected {
+                button.setTitleColor(Colours.secondaryBarEnabledColour, for: .normal)
+            } else {
+                button.setTitleColor(Colours.secondaryBarDisabledColour, for: .normal)
+            }
         }
     }
     
