@@ -415,6 +415,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cityTextField" destination="eTw-bn-9uk" id="beb-to-hO8"/>
+                        <outlet property="companyLabel" destination="C70-Hf-z4R" id="epe-HT-JIh"/>
+                        <outlet property="companyTextField" destination="dL3-Z5-KlG" id="ctg-tT-6wE"/>
+                        <outlet property="dobLabel" destination="nAN-vP-igt" id="5yU-rg-TGa"/>
+                        <outlet property="dobTextField" destination="dud-4z-WlK" id="Zki-ir-TpW"/>
+                        <outlet property="firstNameTextField" destination="I0d-4e-AUL" id="alp-VH-ZpV"/>
+                        <outlet property="lastNameTextField" destination="wX2-TN-Xpe" id="RIS-mw-NUC"/>
+                        <outlet property="projectNoLabel" destination="XWK-g2-Oah" id="EYi-Uj-FAf"/>
+                        <outlet property="projectNoTextField" destination="vqP-V2-fuD" id="65H-3O-vQA"/>
+                        <outlet property="ssnLabel" destination="opt-1w-Sta" id="SV4-nY-VIg"/>
+                        <outlet property="ssnTextField" destination="8ju-1s-iBL" id="mM0-gK-HxE"/>
+                        <outlet property="stateTextField" destination="Fqb-Lq-Q9x" id="wJX-T2-GRM"/>
+                        <outlet property="streetAddressTextField" destination="q8I-dl-sJK" id="xa8-qc-eZI"/>
+                        <outlet property="zipTextField" destination="o9w-DB-BLw" id="AxO-45-4Oe"/>
+                        <outletCollection property="addressLabels" destination="djc-wn-gLL" collectionClass="NSMutableArray" id="cyf-oC-UKI"/>
+                        <outletCollection property="addressLabels" destination="5pu-Lb-ZUW" collectionClass="NSMutableArray" id="oHR-PQ-dT2"/>
+                        <outletCollection property="addressLabels" destination="WaA-2q-I5R" collectionClass="NSMutableArray" id="M6F-Hd-cu2"/>
+                        <outletCollection property="addressLabels" destination="WCn-bY-aE8" collectionClass="NSMutableArray" id="CpF-9A-QtA"/>
+                        <outletCollection property="nameLabels" destination="wYT-ou-s77" collectionClass="NSMutableArray" id="r9N-rH-vFL"/>
+                        <outletCollection property="nameLabels" destination="spR-X8-dm7" collectionClass="NSMutableArray" id="fl9-kQ-gCT"/>
                         <segue destination="a1E-T1-Q93" kind="show" identifier="toPassTester" id="AQe-4h-7bM"/>
                     </connections>
                 </viewController>
