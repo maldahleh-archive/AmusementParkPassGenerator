@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     
     func updateSecodaryBarWith(_ role: MainEntrantUIBar) {
         secondaryRoleBar.isHidden = false
-        updateMainButtonsWith(mainBarSelection)
+        updateMainButtonsFor(mainBarSelection)
         
         if role == .manager {
             secondaryRoleBar.isHidden = true
@@ -69,12 +69,19 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateMainButtonsWith(_ selected: MainEntrantUIBar) {
+    func updateMainButtonsFor(_ selection: MainEntrantUIBar) {
         for button in mainBarButtons {
-            let selected = (button.tag == mainBarSelection.rawValue)
+            let selected = (button.tag == selection.rawValue)
             
             setSelectedTo(selected, for: button, withType: .main)
         }
+    }
+}
+
+extension ViewController {
+    enum ButtonType {
+        case main
+        case secondary
     }
     
     func setEnabledTo(_ enabled: Bool, for objects: [AnyObject]) {
@@ -118,12 +125,5 @@ class ViewController: UIViewController {
         } else {
             label.backgroundColor = Colours.disabledLabelColour
         }
-    }
-}
-
-extension ViewController {
-    enum ButtonType {
-        case main
-        case secondary
     }
 }
