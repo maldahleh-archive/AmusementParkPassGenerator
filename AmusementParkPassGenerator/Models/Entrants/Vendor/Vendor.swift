@@ -1,5 +1,5 @@
 //
-//  ContractEmployee.swift
+//  Vendor.swift
 //  AmusementParkPassGenerator
 //
 //  Created by Mohammed Al-Dahleh on 2017-12-13.
@@ -8,23 +8,25 @@
 
 import Foundation
 
-class ContractEmployee: Employee {
+class Vendor: Nameable, Dateable {
     var lastSwipe: Date?
     
     var name: Name
     var birthday: CreatedDate
-    var address: Address
-    let contractType: ContractType
+    let vendorType: VendorType
+    
+    var visitDate: Date
     
     var areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(name: Name, birthday: CreatedDate, address: Address, type: ContractType) {
+    init(name: Name, birthday: CreatedDate, type: VendorType) {
         self.name = name
         self.birthday = birthday
-        self.address = address
-        self.contractType = type
+        self.vendorType = type
+        
+        visitDate = Date()
         
         areaAccess = type.areaAccess
         rideAccess = []

@@ -15,6 +15,8 @@
 		4A321B7D1FE1C8D10068192E /* CreatedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B7C1FE1C8D10068192E /* CreatedDate.swift */; };
 		4A321B821FE1D2740068192E /* ContractEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B811FE1D2740068192E /* ContractEmployee.swift */; };
 		4A321B851FE1D6320068192E /* ContractType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B841FE1D6320068192E /* ContractType.swift */; };
+		4A321B881FE1DCC20068192E /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B871FE1DCC20068192E /* Vendor.swift */; };
+		4A321B8A1FE1DCF90068192E /* VendorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B891FE1DCF90068192E /* VendorType.swift */; };
 		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
 		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
@@ -66,6 +68,8 @@
 		4A321B7C1FE1C8D10068192E /* CreatedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDate.swift; sourceTree = "<group>"; };
 		4A321B811FE1D2740068192E /* ContractEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractEmployee.swift; sourceTree = "<group>"; };
 		4A321B841FE1D6320068192E /* ContractType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractType.swift; sourceTree = "<group>"; };
+		4A321B871FE1DCC20068192E /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		4A321B891FE1DCF90068192E /* VendorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorType.swift; sourceTree = "<group>"; };
 		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
 		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
@@ -182,6 +186,15 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
+		4A321B861FE1DCA60068192E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4A321B871FE1DCC20068192E /* Vendor.swift */,
+				4A321B891FE1DCF90068192E /* VendorType.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		4A770ABC1FE087230033B594 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 			children = (
 				4A321B801FE1D1740068192E /* Guests */,
 				4A321B7F1FE1D0EA0068192E /* Employees */,
+				4A321B861FE1DCA60068192E /* Vendor */,
 				4A94962D1FD7BF5C00BB95D3 /* Entrant.swift */,
 			);
 			path = Entrants;
@@ -421,6 +435,7 @@
 			files = (
 				4AE06DEE1FD7DFE200C4AD20 /* DataError.swift in Sources */,
 				4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */,
+				4A321B881FE1DCC20068192E /* Vendor.swift in Sources */,
 				4A2D4A431FD734150086ED0D /* ViewController.swift in Sources */,
 				4AE06DE51FD7D9ED00C4AD20 /* Name.swift in Sources */,
 				4AE06DEA1FD7DC4500C4AD20 /* Address.swift in Sources */,
@@ -433,6 +448,7 @@
 				4A94962C1FD7BC7600BB95D3 /* Guest.swift in Sources */,
 				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,
 				4A321B851FE1D6320068192E /* ContractType.swift in Sources */,
+				4A321B8A1FE1DCF90068192E /* VendorType.swift in Sources */,
 				4A94962E1FD7BF5C00BB95D3 /* Entrant.swift in Sources */,
 				4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */,
 				4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */,

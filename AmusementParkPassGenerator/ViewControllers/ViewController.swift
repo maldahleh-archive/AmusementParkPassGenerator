@@ -287,7 +287,6 @@ extension ViewController {
 }
 
 extension ViewController {
-    
     // Populated with random data retrieved from random address generator
     func populateData() {
         var dobYear = "1990"

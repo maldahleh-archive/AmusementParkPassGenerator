@@ -71,7 +71,7 @@ class SeasonGuest: VIPGuest, Nameable, Addressable {
     let name: Name
     let address: Address
     
-    init(name: Name, address: Address, date: CreatedDate) {
+    init(name: Name, address: Address, birthday: CreatedDate) {
         self.name = name
         self.address = address
         

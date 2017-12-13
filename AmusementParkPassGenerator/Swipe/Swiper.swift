@@ -16,8 +16,8 @@ class Swiper {
         }
         
         if entrant.isBirthday() {
-            let month = entrant.birthday.dateComponents().month!
-            let day = entrant.birthday.dateComponents().day!
+            let month = entrant.birthday().dateComponents().month!
+            let day = entrant.birthday().dateComponents().day!
             
             print("Today is \(month)/\(day), Happy Birthday!")
         }

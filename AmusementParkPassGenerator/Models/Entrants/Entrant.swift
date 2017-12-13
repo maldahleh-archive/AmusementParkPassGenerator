@@ -8,6 +8,23 @@
 
 import Foundation
 
+protocol Swipeable {
+    var lastSwipe: Date? { get set }
+    
+    func swiped()
+}
+
+protocol Entrant: Dateable, Swipeable {
+    var areaAccess: [AreaAccess] { get }
+    var rideAccess: [RideAccess] { get set }
+    var discountAccess: [DiscountAccess] { get set }
+    
+    func birthday() -> Date
+    func isBirthday() -> Bool
+}
+
+protocol Employee: Entrant, Nameable, Addressable {}
+
 extension Date {
     static func create(day: Int, month: Int, year: Int) -> Date {
         var dateComponents = DateComponents()
@@ -19,16 +36,8 @@ extension Date {
     }
 }
 
-protocol Swipeable {
-    var lastSwipe: Date? { get set }
+extension Entrant {
+    func birthday() -> Date { return birthday.birthday }
     
-    func swiped()
+    func isBirthday() -> Bool { return birthday.isBirthday() }
 }
-
-protocol Entrant: Dateable, Swipeable {
-    var areaAccess: [AreaAccess] { get }
-    var rideAccess: [RideAccess] { get set }
-    var discountAccess: [DiscountAccess] { get set }
-}
-
-protocol Employee: Entrant, Nameable, Addressable {}
