@@ -290,7 +290,17 @@ extension ViewController {
     
     // Populated with random data retrieved from random address generator
     func populateData() {
-        dobTextField.text = "10/05/1990"
+        var dobYear = "1990"
+        
+        if selectionHandler.mainBarSelection == .guest {
+            switch selectionHandler.secondarySelection {
+            case 0: dobYear = "2016"
+            case 3: dobYear = "1942"
+            default: break
+            }
+        }
+        
+        dobTextField.text = "10/05/\(dobYear)"
         ssnTextField.text = "613-42-9837"
         
         if firstNameTextField.isEnabled {
