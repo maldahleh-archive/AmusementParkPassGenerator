@@ -14,6 +14,7 @@ class ContractEmployee: Employee {
     var name: Name
     var birthday: CreatedDate
     var address: Address
+    let contractType: ContractType
     
     var areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
@@ -23,6 +24,7 @@ class ContractEmployee: Employee {
         self.name = name
         self.birthday = birthday
         self.address = address
+        self.contractType = contractType
         
         areaAccess = type.areaAccess
         rideAccess = []
@@ -31,25 +33,5 @@ class ContractEmployee: Employee {
     
     func swiped() {
         lastSwipe = Date()
-    }
-}
-
-enum ContractType {
-    case oneThousandAndOne
-    case oneThousandAndTwo
-    case oneThousandAndThree
-    case twoThousandAndOne
-    case twoThousandAndTwo
-}
-
-extension ContractType {
-    var areaAccess: [AreaAccess] {
-        switch self {
-        case .oneThousandAndOne: return [.amusement, .rideControl]
-        case .oneThousandAndTwo: return [.amusement, .rideControl, .maintenance]
-        case .oneThousandAndThree: return [.amusement, .rideControl, .kitchen, .office, .maintenance]
-        case .twoThousandAndOne: return [.office]
-        case .twoThousandAndTwo: return [.kitchen, .maintenance]
-        }
     }
 }
