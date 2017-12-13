@@ -13,6 +13,7 @@
 		4A2D4A481FD734150086ED0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A471FD734150086ED0D /* Assets.xcassets */; };
 		4A2D4A4B1FD734150086ED0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D4A491FD734150086ED0D /* LaunchScreen.storyboard */; };
 		4A321B7D1FE1C8D10068192E /* CreatedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B7C1FE1C8D10068192E /* CreatedDate.swift */; };
+		4A321B821FE1D2740068192E /* ContractEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B811FE1D2740068192E /* ContractEmployee.swift */; };
 		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
 		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
@@ -62,6 +63,7 @@
 		4A2D4A511FD734150086ED0D /* AmusementParkPassGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D4A5C1FD734150086ED0D /* AmusementParkPassGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A321B7C1FE1C8D10068192E /* CreatedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDate.swift; sourceTree = "<group>"; };
+		4A321B811FE1D2740068192E /* ContractEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractEmployee.swift; sourceTree = "<group>"; };
 		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
 		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		4A321B7F1FE1D0EA0068192E /* Employees */ = {
 			isa = PBXGroup;
 			children = (
+				4A321B811FE1D2740068192E /* ContractEmployee.swift */,
 				4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */,
 				4AE06DE21FD7D79A00C4AD20 /* Manager.swift */,
 			);
@@ -421,6 +424,7 @@
 				4A94962E1FD7BF5C00BB95D3 /* Entrant.swift in Sources */,
 				4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */,
 				4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */,
+				4A321B821FE1D2740068192E /* ContractEmployee.swift in Sources */,
 				4ACCF6CE1FDDC50D0057E3E6 /* PassTesterViewController.swift in Sources */,
 				4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */,
 				4A9496321FD7C03600BB95D3 /* Nameable.swift in Sources */,
