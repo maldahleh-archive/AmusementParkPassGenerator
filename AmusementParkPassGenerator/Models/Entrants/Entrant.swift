@@ -40,4 +40,6 @@ extension Entrant {
     func birthday() -> Date { return birthday.birthday }
     
     func isBirthday() -> Bool { return birthday.isBirthday() }
+    
+    func isUnderFive() -> Bool { return birthday.isUnderFive() }
 }

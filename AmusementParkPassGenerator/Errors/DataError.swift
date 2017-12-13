@@ -8,5 +8,6 @@
 
 enum DataError: Error {
     case missingInformation(missing: String)
+    case invalidDate
     case overAgeOfFive
 }

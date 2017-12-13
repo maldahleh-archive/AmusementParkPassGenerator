@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Vendor: Nameable, Dateable {
+class Vendor: Entrant, Nameable {
     var lastSwipe: Date?
     
     var name: Name
