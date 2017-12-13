@@ -416,6 +416,9 @@
                                                         <state key="normal" title="Populate Data">
                                                             <color key="titleColor" red="0.40039122104644775" green="0.57641011476516724" blue="0.56078171730041504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="populateDataButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AII-y6-B9a"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

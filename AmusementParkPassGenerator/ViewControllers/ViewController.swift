@@ -53,6 +53,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
+    @IBAction func populateDataButtonTaped(_ sender: Any) {
+        populateData()
+    }
+    
     // MARK: Role bars
     @IBAction func entrantGroupButtonTapped(_ sender: UIButton) {
         if let mainBarSelection = MainBarSelection(rawValue: sender.tag) {
@@ -278,6 +282,27 @@ extension ViewController {
             label.textColor = Colours.enabledLabelColour
         } else {
             label.textColor = Colours.disabledLabelColour
+        }
+    }
+}
+
+extension ViewController {
+    
+    // Populated with random data retrieved from random address generator
+    func populateData() {
+        dobTextField.text = "10/05/1990"
+        ssnTextField.text = "613-42-9837"
+        
+        if firstNameTextField.isEnabled {
+            firstNameTextField.text = "Eric"
+            lastNameTextField.text = "Morse"
+        }
+        
+        if streetAddressTextField.isEnabled {
+            streetAddressTextField.text = "70 Bowman St"
+            cityTextField.text = "South Windsor"
+            stateTextField.text = "CT"
+            zipTextField.text = "06074"
         }
     }
 }
