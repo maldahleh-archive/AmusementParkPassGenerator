@@ -142,6 +142,15 @@
 			path = AmusementParkPassGenerator;
 			sourceTree = "<group>";
 		};
+		4A321B7E1FE1CBF80068192E /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				4A9496331FD7C0FA00BB95D3 /* Dateable.swift */,
+				4A321B7C1FE1C8D10068192E /* CreatedDate.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		4A770ABC1FE087230033B594 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +214,9 @@
 		4A9496301FD7C01C00BB95D3 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				4AE06DE81FD7DC3000C4AD20 /* Address */,
+				4A321B7E1FE1CBF80068192E /* Date */,
 				4AE06DE61FD7DA8700C4AD20 /* Name */,
-				4A9496331FD7C0FA00BB95D3 /* Dateable.swift */,
-				4A321B7C1FE1C8D10068192E /* CreatedDate.swift */,
+				4AE06DE81FD7DC3000C4AD20 /* Address */,
 			);
 			path = Information;
 			sourceTree = "<group>";

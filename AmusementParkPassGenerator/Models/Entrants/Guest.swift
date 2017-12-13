@@ -11,14 +11,14 @@ import Foundation
 class ClassicGuest: Entrant {
     var lastSwipe: Date?
     
-    let birthday: Date
+    let birthday: CreatedDate
     
     let areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(day: Int, month: Int, year: Int) throws {
-        self.birthday = Date.create(day: day, month: month, year: year)
+    init(date: CreatedDate) {
+        self.birthday = date
         
         areaAccess = [.amusement]
         rideAccess = [.allRides]
@@ -31,18 +31,14 @@ class ClassicGuest: Entrant {
 }
 
 class ChildGuest: ClassicGuest {
-    override init(day: Int, month: Int, year: Int) throws {
-        try! super.init(day: day, month: month, year: year)
-     
-        if !isUnderFive() {
-            throw DataError.overAgeOfFive
-        }
+    override init(date: CreatedDate) {
+        super.init(date: date)
     }
 }
 
 class VIPGuest: ClassicGuest {
-    override init(day: Int, month: Int, year: Int) throws {
-        try! super.init(day: day, month: month, year: year)
+    override init(date: CreatedDate) {
+        super.init(date: date)
         
         rideAccess = [
             .allRides,
@@ -59,10 +55,10 @@ class VIPGuest: ClassicGuest {
 class SeniorGuest: ClassicGuest, Nameable {
     let name: Name
     
-    init(name: Name, day: Int, month: Int, year: Int) {
+    init(name: Name, date: CreatedDate) {
         self.name = name
         
-        try! super.init(day: day, month: month, year: year)
+        super.init(date: date)
         
         rideAccess = [
             .allRides,
@@ -80,11 +76,11 @@ class SeasonGuest: ClassicGuest, Nameable, Addressable {
     let name: Name
     let address: Address
     
-    init(name: Name, address: Address, day: Int, month: Int, year: Int) {
+    init(name: Name, address: Address, date: CreatedDate) {
         self.name = name
         self.address = address
         
-        try! super.init(day: day, month: month, year: year)
+        super.init(date: date)
         
         rideAccess = [
             .allRides,

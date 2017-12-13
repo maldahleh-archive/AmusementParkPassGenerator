@@ -1,8 +1,8 @@
 //
-//  Birthdayable.swift
+//  CreatedDate.swift
 //  AmusementParkPassGenerator
 //
-//  Created by Mohammed Al-Dahleh on 2017-12-06.
+//  Created by Mohammed Al-Dahleh on 2017-12-13.
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
@@ -25,14 +25,15 @@ extension Date {
     }
 }
 
-protocol Dateable {
-    var birthday: Date { get }
+class CreatedDate {
+    let birthday: Date
     
-    func isBirthday() -> Bool
-    func isUnderFive() -> Bool
+    init(day: Int, month: Int, year: Int) throws {
+        birthday = Date.create(day: day, month: month, year: year)
+    }
 }
 
-extension Dateable {
+extension CreatedDate {
     func isBirthday() -> Bool {
         let currentDate = Date()
         let currentDateComponents = currentDate.dateComponents()
