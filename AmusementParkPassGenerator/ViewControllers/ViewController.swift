@@ -42,7 +42,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setSelfAsDelegateFor([streetAddressTextField, cityTextField, stateTextField, zipTextField])
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
     }
     
     deinit {
@@ -184,7 +188,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let frame = keyboardFrame.cgRectValue
             
             if moveViewForKeyboard {
-                self.view.frame.origin.y -= frame.size.height
+                self.view.frame.origin.y = 0
+                
+                let newConstant = self.view.frame.origin.y + self.view.frame.height - frame.size.height
+                self.view.frame.origin.y -= self.view.frame.height - newConstant
             
                 UIView.animate(withDuration: 0.8) {
                     self.view.layoutIfNeeded()
@@ -194,15 +201,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func keyboardWillHide(_ notification: NSNotification) {
-        if let info = notification.userInfo, let keyboardFrame = info[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let frame = keyboardFrame.cgRectValue
-        
-            if moveViewForKeyboard {
-                self.view.frame.origin.y += frame.size.height
+        if moveViewForKeyboard {
+            self.view.frame.origin.y = 0
                 
-                UIView.animate(withDuration: 0.8) {
-                    self.view.layoutIfNeeded()
-                }
+            UIView.animate(withDuration: 0.8) {
+                self.view.layoutIfNeeded()
             }
         }
     }
