@@ -52,18 +52,13 @@ class VIPGuest: ClassicGuest {
     }
 }
 
-class SeniorGuest: ClassicGuest, Nameable {
+class SeniorGuest: VIPGuest, Nameable {
     let name: Name
     
     init(name: Name, date: CreatedDate) {
         self.name = name
         
         super.init(date: date)
-        
-        rideAccess = [
-            .allRides,
-            .skipLines
-        ]
         
         discountAccess = [
             .foodDiscount(discount: 10),
@@ -72,7 +67,7 @@ class SeniorGuest: ClassicGuest, Nameable {
     }
 }
 
-class SeasonGuest: ClassicGuest, Nameable, Addressable {
+class SeasonGuest: VIPGuest, Nameable, Addressable {
     let name: Name
     let address: Address
     
@@ -81,15 +76,5 @@ class SeasonGuest: ClassicGuest, Nameable, Addressable {
         self.address = address
         
         super.init(date: date)
-        
-        rideAccess = [
-            .allRides,
-            .skipLines
-        ]
-        
-        discountAccess = [
-            .foodDiscount(discount: 10),
-            .merchandiseDiscount(discount: 20)
-        ]
     }
 }

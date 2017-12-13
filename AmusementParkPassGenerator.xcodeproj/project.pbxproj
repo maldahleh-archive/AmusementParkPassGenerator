@@ -214,8 +214,8 @@
 		4A9496301FD7C01C00BB95D3 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				4A321B7E1FE1CBF80068192E /* Date */,
 				4AE06DE61FD7DA8700C4AD20 /* Name */,
+				4A321B7E1FE1CBF80068192E /* Date */,
 				4AE06DE81FD7DC3000C4AD20 /* Address */,
 			);
 			path = Information;
