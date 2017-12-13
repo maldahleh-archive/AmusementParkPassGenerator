@@ -12,14 +12,14 @@ class HourlyEmployee: Employee {
     var lastSwipe: Date?
     
     let name: Name
-    let birthday: Date
+    let birthday: CreatedDate
     let address: Address
     
     var areaAccess: [AreaAccess]
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(name: Name, birthday: Date, address: Address) {
+    init(name: Name, birthday: CreatedDate, address: Address) {
         self.name = name
         self.birthday = birthday
         self.address = address
@@ -44,7 +44,7 @@ class HourlyEmployee: Employee {
 }
 
 class HourlyEmployeeFood: HourlyEmployee {
-    override init(name: Name, birthday: Date, address: Address) {
+    override init(name: Name, birthday: CreatedDate, address: Address) {
         super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [
@@ -54,7 +54,7 @@ class HourlyEmployeeFood: HourlyEmployee {
 }
 
 class HourlyEmployeeRideServices: HourlyEmployee {
-    override init(name: Name, birthday: Date, address: Address) {
+    override init(name: Name, birthday: CreatedDate, address: Address) {
         super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [
@@ -64,7 +64,7 @@ class HourlyEmployeeRideServices: HourlyEmployee {
 }
 
 class HourlyEmployeeMaintenance: HourlyEmployee {
-    override init(name: Name, birthday: Date, address: Address) {
+    override init(name: Name, birthday: CreatedDate, address: Address) {
         super.init(name: name, birthday: birthday, address: address)
         
         areaAccess.append(contentsOf: [

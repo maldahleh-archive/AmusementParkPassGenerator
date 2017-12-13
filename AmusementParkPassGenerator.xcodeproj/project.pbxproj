@@ -151,6 +151,23 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		4A321B7F1FE1D0EA0068192E /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */,
+				4AE06DE21FD7D79A00C4AD20 /* Manager.swift */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		4A321B801FE1D1740068192E /* Guests */ = {
+			isa = PBXGroup;
+			children = (
+				4A94962B1FD7BC7600BB95D3 /* Guest.swift */,
+			);
+			path = Guests;
+			sourceTree = "<group>";
+		};
 		4A770ABC1FE087230033B594 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,10 +210,9 @@
 		4A94962A1FD7BC5C00BB95D3 /* Entrants */ = {
 			isa = PBXGroup;
 			children = (
+				4A321B801FE1D1740068192E /* Guests */,
+				4A321B7F1FE1D0EA0068192E /* Employees */,
 				4A94962D1FD7BF5C00BB95D3 /* Entrant.swift */,
-				4A94962B1FD7BC7600BB95D3 /* Guest.swift */,
-				4AE06DE01FD7D4C200C4AD20 /* HourlyEmployee.swift */,
-				4AE06DE21FD7D79A00C4AD20 /* Manager.swift */,
 			);
 			path = Entrants;
 			sourceTree = "<group>";

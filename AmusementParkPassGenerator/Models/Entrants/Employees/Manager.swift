@@ -12,7 +12,7 @@ class Manager: Employee {
     var lastSwipe: Date?
     
     let name: Name
-    let birthday: Date
+    let birthday: CreatedDate
     let address: Address
     
     var areaAccess: [AreaAccess] = [
@@ -32,7 +32,7 @@ class Manager: Employee {
         .merchandiseDiscount(discount: 25)
     ]
     
-    init(name: Name, birthday: Date, address: Address) {
+    init(name: Name, birthday: CreatedDate, address: Address) {
         self.name = name
         self.birthday = birthday
         self.address = address

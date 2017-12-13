@@ -17,8 +17,8 @@ class ClassicGuest: Entrant {
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(date: CreatedDate) {
-        self.birthday = date
+    init(birthday: CreatedDate) {
+        self.birthday = birthday
         
         areaAccess = [.amusement]
         rideAccess = [.allRides]
@@ -31,14 +31,14 @@ class ClassicGuest: Entrant {
 }
 
 class ChildGuest: ClassicGuest {
-    override init(date: CreatedDate) {
-        super.init(date: date)
+    override init(birthday: CreatedDate) {
+        super.init(birthday: birthday)
     }
 }
 
 class VIPGuest: ClassicGuest {
-    override init(date: CreatedDate) {
-        super.init(date: date)
+    override init(birthday: CreatedDate) {
+        super.init(birthday: birthday)
         
         rideAccess = [
             .allRides,
@@ -55,10 +55,10 @@ class VIPGuest: ClassicGuest {
 class SeniorGuest: VIPGuest, Nameable {
     let name: Name
     
-    init(name: Name, date: CreatedDate) {
+    init(name: Name, birthday: CreatedDate) {
         self.name = name
         
-        super.init(date: date)
+        super.init(birthday: birthday)
         
         discountAccess = [
             .foodDiscount(discount: 10),
@@ -75,6 +75,6 @@ class SeasonGuest: VIPGuest, Nameable, Addressable {
         self.name = name
         self.address = address
         
-        super.init(date: date)
+        super.init(birthday: birthday)
     }
 }
