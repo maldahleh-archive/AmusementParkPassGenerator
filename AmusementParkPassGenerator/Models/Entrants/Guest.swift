@@ -17,18 +17,12 @@ class ClassicGuest: Entrant {
     var rideAccess: [RideAccess]
     var discountAccess: [DiscountAccess]
     
-    init(birthday: Date) throws {
-        self.birthday = birthday
+    init(day: Int, month: Int, year: Int) throws {
+        self.birthday = Date.create(day: day, month: month, year: year)
         
         areaAccess = [.amusement]
         rideAccess = [.allRides]
         discountAccess = []
-    }
-    
-    convenience init (day: Int, month: Int, year: Int) throws {
-        let createdBirthday = Date.create(day: day, month: month, year: year)
-        
-        try! self.init(birthday: createdBirthday)
     }
     
     func swiped() {
@@ -36,10 +30,19 @@ class ClassicGuest: Entrant {
     }
 }
 
+class ChildGuest: ClassicGuest {
+    override init(day: Int, month: Int, year: Int) throws {
+        try! super.init(day: day, month: month, year: year)
+     
+        if !isUnderFive() {
+            throw DataError.overAgeOfFive
+        }
+    }
+}
+
 class VIPGuest: ClassicGuest {
-    init(day: Int, month: Int, year: Int) throws {
-        let createdBirthday = Date.create(day: day, month: month, year: year)
-        try! super.init(birthday: createdBirthday)
+    override init(day: Int, month: Int, year: Int) throws {
+        try! super.init(day: day, month: month, year: year)
         
         rideAccess = [
             .allRides,
@@ -53,13 +56,44 @@ class VIPGuest: ClassicGuest {
     }
 }
 
-class ChildGuest: ClassicGuest {
-    init(day: Int, month: Int, year: Int) throws {
-        let createdBirthday = Date.create(day: day, month: month, year: year)
-        try! super.init(birthday: createdBirthday)
-     
-        if !isUnderFive() {
-            throw DataError.overAgeOfFive
-        }
+class SeniorGuest: ClassicGuest, Nameable {
+    let name: Name
+    
+    init(name: Name, day: Int, month: Int, year: Int) {
+        self.name = name
+        
+        try! super.init(day: day, month: month, year: year)
+        
+        rideAccess = [
+            .allRides,
+            .skipLines
+        ]
+        
+        discountAccess = [
+            .foodDiscount(discount: 10),
+            .merchandiseDiscount(discount: 10)
+        ]
+    }
+}
+
+class SeasonGuest: ClassicGuest, Nameable, Addressable {
+    let name: Name
+    let address: Address
+    
+    init(name: Name, address: Address, day: Int, month: Int, year: Int) {
+        self.name = name
+        self.address = address
+        
+        try! super.init(day: day, month: month, year: year)
+        
+        rideAccess = [
+            .allRides,
+            .skipLines
+        ]
+        
+        discountAccess = [
+            .foodDiscount(discount: 10),
+            .merchandiseDiscount(discount: 20)
+        ]
     }
 }
