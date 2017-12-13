@@ -437,7 +437,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.85493952035903931" green="0.83916682004928589" blue="0.87058562040328979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ixq-3Y-wPt" secondAttribute="bottom" constant="20" id="IL6-FJ-tzu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ixq-3Y-wPt" secondAttribute="bottom" priority="900" constant="20" id="IL6-FJ-tzu"/>
                             <constraint firstItem="Ixq-3Y-wPt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qf5-QX-HHX"/>
                             <constraint firstItem="Ixq-3Y-wPt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R2Y-d6-MZG"/>
                             <constraint firstItem="Ixq-3Y-wPt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UDG-fK-eN1"/>
