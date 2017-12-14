@@ -31,6 +31,8 @@ extension ViewController {
         
         if firstNameTextField.isEnabled {
             if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text {
+                try validLengthsFor([firstName, lastName])
+                
                 do {
                     name = try Name(firstName: firstName, lastName: lastName)
                 } catch let error {
@@ -43,6 +45,8 @@ extension ViewController {
         
         if streetAddressTextField.isEnabled {
             if let streetAddress = streetAddressTextField.text, let city = cityTextField.text, let state = stateTextField.text, let zipCode = zipTextField.text {
+                try validLengthsFor([streetAddress, city, state, zipCode])
+                
                 do {
                     address = try Address(streetAddress: streetAddress, city: city, state: state, zipCode: zipCode)
                 } catch let error {
@@ -77,6 +81,14 @@ extension ViewController {
         case .manager: return Manager(name: name!, birthday: birthday!, address: address!)
         case .contract: return ContractEmployee(name: name!, birthday: birthday!, address: address!, type: contractType!)
         case .vendor: return Vendor(name: name!, birthday: birthday!, type: vendorType!)
+        }
+    }
+    
+    func validLengthsFor(_ fields: [String]) throws {
+        for field in fields {
+            if field.count > 32 {
+                throw DataError.longInput
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ enum DataError: Error {
     case zipNotNumber
     case stateLengthError
     case overAgeOfFive
+    case longInput
 }
 
 extension DataError {
@@ -26,6 +27,7 @@ extension DataError {
         case .zipNotNumber: return "Invaliz Zip"
         case .stateLengthError: return "Invalid State"
         case .overAgeOfFive: return "Too Old"
+        case .longInput: return "Long Input"
         }
     }
     
@@ -38,6 +40,7 @@ extension DataError {
         case .zipIncorrectLength: return "A Zip Code must be five numbers."
         case .stateLengthError: return "A state must be two characters."
         case .overAgeOfFive: return "A child must be under the age of five."
+        case .longInput: return "The maximum field length is 32 characters."
         }
     }
 }
