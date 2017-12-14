@@ -225,9 +225,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         do {
             if let entrant = try createEntrant() {
                 performSegue(withIdentifier: "toPassTester", sender: entrant)
+            } else {
+                fatalError("This should not occur, invalid entrant passed.")
             }
+        } catch DataError.invalidDate {
+            let alert = AlertCreator.createAlertWith(title: "Invalid Information", message: "You provided an invalid date, use MM/DD/YYYY.")
+            present(alert, animated: true, completion: nil)
+        } catch DataError.missingInformation(let detailed) {
+            let alert = AlertCreator.createAlertWith(title: "Invalid Information", message: "Your \(detailed) field is empty, please fill it in.")
+            present(alert, animated: true, completion: nil)
+        } catch DataError.overAgeOfFive {
+            let alert = AlertCreator.createAlertWith(title: "Too Old", message: "A child pass can only be created for those under 5.")
+            present(alert, animated: true, completion: nil)
         } catch let error {
-            print(error)
+            fatalError("Unexpected error: \(error.localizedDescription)")
         }
     }
     

@@ -9,5 +9,6 @@
 enum DataError: Error {
     case missingInformation(missing: String)
     case invalidDate
+    case zipNotNumber
     case overAgeOfFive
 }

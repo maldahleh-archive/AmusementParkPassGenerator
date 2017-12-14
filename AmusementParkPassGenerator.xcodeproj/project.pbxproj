@@ -19,6 +19,7 @@
 		4A321B8A1FE1DCF90068192E /* VendorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B891FE1DCF90068192E /* VendorType.swift */; };
 		4A4A65341FE23666001FB8CF /* EntrantPassBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */; };
 		4A4A65361FE2370A001FB8CF /* DataRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */; };
+		4A4A65391FE24CDF001FB8CF /* AlertCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65381FE24CDF001FB8CF /* AlertCreator.swift */; };
 		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
 		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
@@ -74,6 +75,7 @@
 		4A321B891FE1DCF90068192E /* VendorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorType.swift; sourceTree = "<group>"; };
 		4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantPassBuilder.swift; sourceTree = "<group>"; };
 		4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRandomizer.swift; sourceTree = "<group>"; };
+		4A4A65381FE24CDF001FB8CF /* AlertCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreator.swift; sourceTree = "<group>"; };
 		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
 		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		4A770ABE1FE087490033B594 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4A4A65381FE24CDF001FB8CF /* AlertCreator.swift */,
 				4A94D63B1FDFDDF300437E54 /* Colours.swift */,
 			);
 			path = Utilities;
@@ -463,6 +466,7 @@
 				4A7EB94E1FD735680059F15A /* RideAccess.swift in Sources */,
 				4A321B851FE1D6320068192E /* ContractType.swift in Sources */,
 				4A321B8A1FE1DCF90068192E /* VendorType.swift in Sources */,
+				4A4A65391FE24CDF001FB8CF /* AlertCreator.swift in Sources */,
 				4A94962E1FD7BF5C00BB95D3 /* Entrant.swift in Sources */,
 				4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */,
 				4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */,
