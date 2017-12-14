@@ -657,6 +657,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zbi-Ga-jvZ"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="ZZm-Te-Ez4" id="CBj-9R-22m"/>
+                        <outlet property="resultsLabel" destination="dPx-US-nGs" id="Cj5-Hk-4bp"/>
+                        <outlet property="typeLabel" destination="DD6-z6-2hH" id="fhA-dW-AM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmE-fG-VaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
