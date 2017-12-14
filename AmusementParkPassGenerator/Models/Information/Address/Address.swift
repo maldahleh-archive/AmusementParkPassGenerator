@@ -29,6 +29,8 @@ struct Address {
             throw DataError.missingInformation(missing: "Zip Code")
         }
         
+        if zipCode.count != 5 { throw DataError.zipIncorrectLength }
+        
         guard Int(zipCode) != nil else { throw DataError.zipNotNumber }
         
         self.streetAddress = streetAddress

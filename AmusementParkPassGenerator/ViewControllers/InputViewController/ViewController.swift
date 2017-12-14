@@ -237,6 +237,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } catch DataError.overAgeOfFive {
             let alert = AlertCreator.createAlertWith(title: "Too Old", message: "A child pass can only be created for those under 5.")
             present(alert, animated: true, completion: nil)
+        } catch DataError.zipNotNumber {
+            let alert = AlertCreator.createAlertWith(title: "Zip Code Invalid", message: "Zip Code must be a number.")
+            present(alert, animated: true, completion: nil)
+        } catch DataError.zipIncorrectLength {
+            let alert = AlertCreator.createAlertWith(title: "Zip Incorrect Length", message: "Zip Code must be five numbers.")
+            present(alert, animated: true, completion: nil)
         } catch let error {
             fatalError("Unexpected error: \(error.localizedDescription)")
         }
