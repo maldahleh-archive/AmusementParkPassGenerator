@@ -555,30 +555,30 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-hH-9br">
-                                <rect key="frame" x="80" y="319" width="864" height="429"/>
+                                <rect key="frame" x="80" y="323" width="864" height="425"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7dt-UY-N9n">
-                                        <rect key="frame" x="0.0" y="0.0" width="864" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="864" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Testing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADf-hS-8VL">
-                                                <rect key="frame" x="0.0" y="0.0" width="864" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="864" height="31"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" red="0.36470934748649597" green="0.35685056447982788" blue="0.3647037148475647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm the pass has the expeced level of access when swiped at a kiosk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-Xy-1oC">
-                                                <rect key="frame" x="0.0" y="54" width="864" height="46"/>
+                                                <rect key="frame" x="0.0" y="39" width="864" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="0.50589454174041748" green="0.49801963567733765" blue="0.50980132818222046" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="gCY-ye-plm"/>
+                                            <constraint firstAttribute="height" constant="70" id="gCY-ye-plm"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-5c-JP9">
-                                        <rect key="frame" x="0.0" y="110" width="864" height="60"/>
+                                        <rect key="frame" x="0.0" y="80" width="864" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rE-Bs-upo">
                                                 <rect key="frame" x="0.0" y="0.0" width="281.5" height="60"/>
@@ -610,10 +610,10 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCW-ri-4IH">
-                                        <rect key="frame" x="0.0" y="180" width="864" height="159"/>
+                                        <rect key="frame" x="0.0" y="150" width="864" height="185"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-US-nGs">
-                                                <rect key="frame" x="380.5" y="68" width="104.5" height="24"/>
+                                                <rect key="frame" x="380.5" y="81" width="104.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.49023067951202393" green="0.4783899188041687" blue="0.50588202476501465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -626,7 +626,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acd-W5-oxl">
-                                        <rect key="frame" x="0.0" y="349" width="864" height="80"/>
+                                        <rect key="frame" x="0.0" y="345" width="864" height="80"/>
                                         <color key="backgroundColor" red="0.79219383001327515" green="0.77642232179641724" blue="0.80784100294113159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="NQL-CE-Ve8"/>
@@ -645,7 +645,7 @@
                         <color key="backgroundColor" red="0.85493952035903931" green="0.83916682004928589" blue="0.87058562040328979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cGu-Ep-FXZ" firstAttribute="top" secondItem="cEv-C3-E3c" secondAttribute="top" id="0Iu-0s-1me"/>
-                            <constraint firstItem="Omu-hH-9br" firstAttribute="top" secondItem="2fO-NP-xPW" secondAttribute="bottom" constant="8" id="8A1-Z4-uuv"/>
+                            <constraint firstItem="Omu-hH-9br" firstAttribute="top" secondItem="2fO-NP-xPW" secondAttribute="bottom" constant="12" id="8A1-Z4-uuv"/>
                             <constraint firstItem="Zbi-Ga-jvZ" firstAttribute="bottom" secondItem="Omu-hH-9br" secondAttribute="bottom" constant="20" id="Dq0-4A-fWs"/>
                             <constraint firstItem="cGu-Ep-FXZ" firstAttribute="trailing" secondItem="Zbi-Ga-jvZ" secondAttribute="trailing" id="MvR-zz-EX3"/>
                             <constraint firstItem="2fO-NP-xPW" firstAttribute="top" secondItem="cGu-Ep-FXZ" secondAttribute="bottom" constant="20" id="Uxb-43-frQ"/>
