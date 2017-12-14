@@ -228,26 +228,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             } else {
                 fatalError("This should not occur, invalid entrant passed.")
             }
-        } catch DataError.invalidDate {
-            let alert = AlertCreator.createAlertWith(title: "Invalid Information", message: "You provided an invalid date, use MM/DD/YYYY.")
-            present(alert, animated: true, completion: nil)
-        } catch DataError.missingInformation(let detailed) {
-            let alert = AlertCreator.createAlertWith(title: "Invalid Information", message: "Your \(detailed) field is empty, please fill it in.")
-            present(alert, animated: true, completion: nil)
-        } catch DataError.overAgeOfFive {
-            let alert = AlertCreator.createAlertWith(title: "Too Old", message: "A child pass can only be created for those under 5.")
-            present(alert, animated: true, completion: nil)
-        } catch DataError.zipNotNumber {
-            let alert = AlertCreator.createAlertWith(title: "Zip Code Invalid", message: "Zip Code must be a number.")
-            present(alert, animated: true, completion: nil)
-        } catch DataError.zipIncorrectLength {
-            let alert = AlertCreator.createAlertWith(title: "Zip Incorrect Length", message: "Zip Code must be five numbers.")
-            present(alert, animated: true, completion: nil)
-        } catch DataError.stateLengthError {
-            let alert = AlertCreator.createAlertWith(title: "State Incorrect Length", message: "State must be two character abbreviation.")
-            present(alert, animated: true, completion: nil)
         } catch let error {
-            fatalError("Unexpected error: \(error.localizedDescription)")
+            if error is DataError {
+                let dataError = error as! DataError
+                let alert = AlertCreator.createAlertWith(title: dataError.title, message: dataError.description)
+                present(alert, animated: true, completion: nil)
+            } else {
+                fatalError("Unexpected error: \(error.localizedDescription)")
+            }
         }
     }
     
