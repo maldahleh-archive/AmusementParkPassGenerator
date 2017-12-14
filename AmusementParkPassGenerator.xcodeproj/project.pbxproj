@@ -17,6 +17,8 @@
 		4A321B851FE1D6320068192E /* ContractType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B841FE1D6320068192E /* ContractType.swift */; };
 		4A321B881FE1DCC20068192E /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B871FE1DCC20068192E /* Vendor.swift */; };
 		4A321B8A1FE1DCF90068192E /* VendorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A321B891FE1DCF90068192E /* VendorType.swift */; };
+		4A4A65341FE23666001FB8CF /* EntrantPassBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */; };
+		4A4A65361FE2370A001FB8CF /* DataRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */; };
 		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
 		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
@@ -70,6 +72,8 @@
 		4A321B841FE1D6320068192E /* ContractType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractType.swift; sourceTree = "<group>"; };
 		4A321B871FE1DCC20068192E /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		4A321B891FE1DCF90068192E /* VendorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorType.swift; sourceTree = "<group>"; };
+		4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantPassBuilder.swift; sourceTree = "<group>"; };
+		4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRandomizer.swift; sourceTree = "<group>"; };
 		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
 		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
@@ -195,12 +199,22 @@
 			path = Vendor;
 			sourceTree = "<group>";
 		};
+		4A4A65371FE23720001FB8CF /* InputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A2D4A421FD734150086ED0D /* ViewController.swift */,
+				4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */,
+				4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */,
+			);
+			path = InputViewController;
+			sourceTree = "<group>";
+		};
 		4A770ABC1FE087230033B594 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A4A65371FE23720001FB8CF /* InputViewController */,
 				4A770ABF1FE087670033B594 /* Selections */,
 				4A770ABE1FE087490033B594 /* Utilities */,
-				4A2D4A421FD734150086ED0D /* ViewController.swift */,
 				4ACCF6CD1FDDC50D0057E3E6 /* PassTesterViewController.swift */,
 			);
 			path = ViewControllers;
@@ -453,9 +467,11 @@
 				4A9496341FD7C0FA00BB95D3 /* Dateable.swift in Sources */,
 				4AE06DEC1FD7DCE200C4AD20 /* Addressable.swift in Sources */,
 				4A321B821FE1D2740068192E /* ContractEmployee.swift in Sources */,
+				4A4A65341FE23666001FB8CF /* EntrantPassBuilder.swift in Sources */,
 				4ACCF6CE1FDDC50D0057E3E6 /* PassTesterViewController.swift in Sources */,
 				4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */,
 				4A9496321FD7C03600BB95D3 /* Nameable.swift in Sources */,
+				4A4A65361FE2370A001FB8CF /* DataRandomizer.swift in Sources */,
 				4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */,
 				4AE06DE11FD7D4C200C4AD20 /* HourlyEmployee.swift in Sources */,
 				4A2D4A411FD734150086ED0D /* AppDelegate.swift in Sources */,
