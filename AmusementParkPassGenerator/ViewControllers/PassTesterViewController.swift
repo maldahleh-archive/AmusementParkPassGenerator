@@ -9,6 +9,7 @@
 import UIKit
 
 class PassTesterViewController: UIViewController {
+    var soundProvider = SoundProvider()
     var entrant: Entrant!
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -98,14 +99,16 @@ class PassTesterViewController: UIViewController {
     
     func updateResultsWith(resultString result: String) {
         if result.isEmpty || result == "" {
+            soundProvider.playDeniedSound()
             resultsLabel.text = "Denied"
             resultsView.backgroundColor = .red
             return
         }
         
         var cleanedResultText = result
-        
         cleanedResultText.removeLast(2)
+        
+        soundProvider.playGrantedSound()
         resultsLabel.text = cleanedResultText
         resultsView.backgroundColor = .green
     }

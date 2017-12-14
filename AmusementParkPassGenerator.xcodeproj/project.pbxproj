@@ -20,6 +20,9 @@
 		4A4A65341FE23666001FB8CF /* EntrantPassBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */; };
 		4A4A65361FE2370A001FB8CF /* DataRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */; };
 		4A4A65391FE24CDF001FB8CF /* AlertCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A65381FE24CDF001FB8CF /* AlertCreator.swift */; };
+		4A4A653D1FE26582001FB8CF /* AccessDenied.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A653B1FE26582001FB8CF /* AccessDenied.wav */; };
+		4A4A653E1FE26582001FB8CF /* AccessGranted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A653C1FE26582001FB8CF /* AccessGranted.wav */; };
+		4A4A65401FE2658D001FB8CF /* SoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A653F1FE2658D001FB8CF /* SoundProvider.swift */; };
 		4A770AC41FE087FB0033B594 /* MainBarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC31FE087FB0033B594 /* MainBarSelection.swift */; };
 		4A770AC61FE08DCA0033B594 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */; };
 		4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7EB94B1FD735150059F15A /* AreaAccess.swift */; };
@@ -76,6 +79,9 @@
 		4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantPassBuilder.swift; sourceTree = "<group>"; };
 		4A4A65351FE2370A001FB8CF /* DataRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRandomizer.swift; sourceTree = "<group>"; };
 		4A4A65381FE24CDF001FB8CF /* AlertCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCreator.swift; sourceTree = "<group>"; };
+		4A4A653B1FE26582001FB8CF /* AccessDenied.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessDenied.wav; sourceTree = "<group>"; };
+		4A4A653C1FE26582001FB8CF /* AccessGranted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessGranted.wav; sourceTree = "<group>"; };
+		4A4A653F1FE2658D001FB8CF /* SoundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProvider.swift; sourceTree = "<group>"; };
 		4A770AC31FE087FB0033B594 /* MainBarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarSelection.swift; sourceTree = "<group>"; };
 		4A770AC51FE08DCA0033B594 /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
 		4A7EB94B1FD735150059F15A /* AreaAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAccess.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				4A770ABC1FE087230033B594 /* ViewControllers */,
 				4A94962F1FD7BFAD00BB95D3 /* Models */,
 				4AA968221FD7E87500F1CBC5 /* Swipe */,
+				4A4A653A1FE26561001FB8CF /* Sound */,
 				4AE06DE71FD7DBDF00C4AD20 /* Errors */,
 				4A2D4A401FD734150086ED0D /* AppDelegate.swift */,
 				4A2D4A441FD734150086ED0D /* Main.storyboard */,
@@ -209,6 +216,16 @@
 				4A4A65331FE23666001FB8CF /* EntrantPassBuilder.swift */,
 			);
 			path = InputViewController;
+			sourceTree = "<group>";
+		};
+		4A4A653A1FE26561001FB8CF /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				4A4A653B1FE26582001FB8CF /* AccessDenied.wav */,
+				4A4A653C1FE26582001FB8CF /* AccessGranted.wav */,
+				4A4A653F1FE2658D001FB8CF /* SoundProvider.swift */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		4A770ABC1FE087230033B594 /* ViewControllers */ = {
@@ -424,8 +441,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2D4A4B1FD734150086ED0D /* LaunchScreen.storyboard in Resources */,
+				4A4A653E1FE26582001FB8CF /* AccessGranted.wav in Resources */,
 				4A2D4A481FD734150086ED0D /* Assets.xcassets in Resources */,
 				4A2D4A461FD734150086ED0D /* Main.storyboard in Resources */,
+				4A4A653D1FE26582001FB8CF /* AccessDenied.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +495,7 @@
 				4A7EB94C1FD735150059F15A /* AreaAccess.swift in Sources */,
 				4A9496321FD7C03600BB95D3 /* Nameable.swift in Sources */,
 				4A4A65361FE2370A001FB8CF /* DataRandomizer.swift in Sources */,
+				4A4A65401FE2658D001FB8CF /* SoundProvider.swift in Sources */,
 				4AE06DE31FD7D79A00C4AD20 /* Manager.swift in Sources */,
 				4AE06DE11FD7D4C200C4AD20 /* HourlyEmployee.swift in Sources */,
 				4A2D4A411FD734150086ED0D /* AppDelegate.swift in Sources */,
