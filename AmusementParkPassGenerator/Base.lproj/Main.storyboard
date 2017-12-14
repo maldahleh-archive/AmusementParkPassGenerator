@@ -587,22 +587,31 @@
                                                 <state key="normal" title="Area Access">
                                                     <color key="titleColor" red="0.40039122104644775" green="0.57641011476516724" blue="0.56078171730041504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="accessTestButtonTapped:" destination="a1E-T1-Q93" eventType="touchUpInside" id="acG-5L-qvw"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHv-Ju-Jxc">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHv-Ju-Jxc">
                                                 <rect key="frame" x="291.5" y="0.0" width="281" height="60"/>
                                                 <color key="backgroundColor" red="0.93336415289999997" green="0.92545408009999997" blue="0.94509333370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                 <state key="normal" title="Ride Access">
                                                     <color key="titleColor" red="0.40039122100000002" green="0.57641011480000004" blue="0.56078171730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="accessTestButtonTapped:" destination="a1E-T1-Q93" eventType="touchUpInside" id="Hf2-x0-2lq"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-io-wi4">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-io-wi4">
                                                 <rect key="frame" x="582.5" y="0.0" width="281.5" height="60"/>
                                                 <color key="backgroundColor" red="0.93336415289999997" green="0.92545408009999997" blue="0.94509333370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                 <state key="normal" title="Discount Access">
                                                     <color key="titleColor" red="0.40039122100000002" green="0.57641011480000004" blue="0.56078171730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="accessTestButtonTapped:" destination="a1E-T1-Q93" eventType="touchUpInside" id="OFZ-eP-JDZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

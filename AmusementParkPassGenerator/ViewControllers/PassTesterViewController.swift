@@ -9,7 +9,7 @@
 import UIKit
 
 class PassTesterViewController: UIViewController {
-    var entrant: Entrant?
+    var entrant: Entrant!
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -57,5 +57,20 @@ class PassTesterViewController: UIViewController {
                 typeLabel.text = "Vendor Pass"
             }
         }
+    }
+    
+    @IBAction func accessTestButtonTapped(_ sender: UIButton) {
+        if !Swiper.allowTimeSwipeFor(entrant) {
+            let swipedQuicklyAlert = AlertCreator.createAlertWith(title: "Swiped Too Soon", message: "You have to wait \(Swiper.secondsBetweenSwipes) between swipes.")
+            present(swipedQuicklyAlert, animated: true, completion: nil)
+            return
+        }
+        
+        if entrant.isBirthday() {
+            let birthdayAlert = AlertCreator.createAlertWith(title: "Happy Birthday", message: "It's the entrant's birthday!")
+            present(birthdayAlert, animated: true, completion: nil)
+        }
+        
+        entrant.swiped()
     }
 }
