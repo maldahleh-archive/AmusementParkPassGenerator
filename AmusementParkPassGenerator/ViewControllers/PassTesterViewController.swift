@@ -14,6 +14,7 @@ class PassTesterViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     
+    @IBOutlet weak var resultsView: UIView!
     @IBOutlet weak var resultsLabel: UILabel!
     
     override func viewDidLoad() {
@@ -71,6 +72,41 @@ class PassTesterViewController: UIViewController {
             present(birthdayAlert, animated: true, completion: nil)
         }
         
+        var resultString = ""
+        switch sender.tag {
+        case 0:
+            let areaAccess = entrant.swipe(withSwipeType: AreaAccess.amusement)
+            for area in areaAccess {
+                resultString += "\(area.rawValue), "
+            }
+        case 1:
+            let rideAccess = entrant.swipe(withSwipeType: RideAccess.allRides)
+            for ride in rideAccess {
+                resultString += "\(ride.rawValue), "
+            }
+        case 2:
+            let discountAccess = entrant.swipe(withSwipeType: DiscountAccess.merchandiseDiscount(discount: 0))
+            for discount in discountAccess {
+                resultString += "\(discount.name()), "
+            }
+        default: break
+        }
+        
+        updateResultsWith(resultString: resultString)
         entrant.swiped()
+    }
+    
+    func updateResultsWith(resultString result: String) {
+        if result.isEmpty || result == "" {
+            resultsLabel.text = "Denied"
+            resultsView.backgroundColor = .red
+            return
+        }
+        
+        var cleanedResultText = result
+        
+        cleanedResultText.removeLast(2)
+        resultsLabel.text = cleanedResultText
+        resultsView.backgroundColor = .green
     }
 }

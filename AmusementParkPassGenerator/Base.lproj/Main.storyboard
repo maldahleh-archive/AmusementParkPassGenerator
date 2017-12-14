@@ -622,8 +622,8 @@
                                         <rect key="frame" x="0.0" y="150" width="864" height="185"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-US-nGs">
-                                                <rect key="frame" x="380.5" y="81" width="104.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="375.5" y="81" width="114.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="0.49023067951202393" green="0.4783899188041687" blue="0.50588202476501465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -669,6 +669,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="ZZm-Te-Ez4" id="CBj-9R-22m"/>
                         <outlet property="resultsLabel" destination="dPx-US-nGs" id="Cj5-Hk-4bp"/>
+                        <outlet property="resultsView" destination="nCW-ri-4IH" id="eME-CV-uLy"/>
                         <outlet property="typeLabel" destination="DD6-z6-2hH" id="fhA-dW-AM8"/>
                     </connections>
                 </viewController>
