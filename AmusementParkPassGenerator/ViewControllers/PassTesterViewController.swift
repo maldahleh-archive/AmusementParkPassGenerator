@@ -9,6 +9,7 @@
 import UIKit
 
 class PassTesterViewController: UIViewController {
+    var entrant: Entrant?
 
     override func viewDidLoad() {
         super.viewDidLoad()

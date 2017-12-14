@@ -237,6 +237,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let targetViewController = segue.destination as? PassTesterViewController else { return }
         
         guard let entrant = sender as? Entrant else { return }
+        
+        targetViewController.entrant = entrant
     }
 }
 
