@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum RideAccess: GenericAccess {
-    case allRides
-    case skipLines
+enum RideAccess: String, GenericAccess {
+    case allRides = "All Rides"
+    case skipLines = "Skip Lines"
 }

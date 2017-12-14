@@ -6,10 +6,10 @@
 //  Copyright © 2017 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum AreaAccess: GenericAccess {
-    case amusement
-    case kitchen
-    case rideControl
-    case maintenance
-    case office
+enum AreaAccess: String, GenericAccess {
+    case amusement = "Amusement"
+    case kitchen = "Kitchen"
+    case rideControl = "Ride Control"
+    case maintenance = "Maintenance"
+    case office = "Office"
 }
