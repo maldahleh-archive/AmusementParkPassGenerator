@@ -243,6 +243,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } catch DataError.zipIncorrectLength {
             let alert = AlertCreator.createAlertWith(title: "Zip Incorrect Length", message: "Zip Code must be five numbers.")
             present(alert, animated: true, completion: nil)
+        } catch DataError.stateLengthError {
+            let alert = AlertCreator.createAlertWith(title: "State Incorrect Length", message: "State must be two character abbreviation.")
+            present(alert, animated: true, completion: nil)
         } catch let error {
             fatalError("Unexpected error: \(error.localizedDescription)")
         }

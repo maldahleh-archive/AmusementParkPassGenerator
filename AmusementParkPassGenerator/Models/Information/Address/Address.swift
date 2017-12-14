@@ -25,6 +25,10 @@ struct Address {
             throw DataError.missingInformation(missing: "State")
         }
         
+        if state.count != 2 {
+            throw DataError.stateLengthError
+        }
+        
         if zipCode.isEmpty {
             throw DataError.missingInformation(missing: "Zip Code")
         }

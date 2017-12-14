@@ -11,5 +11,6 @@ enum DataError: Error {
     case invalidDate
     case zipIncorrectLength
     case zipNotNumber
+    case stateLengthError
     case overAgeOfFive
 }
