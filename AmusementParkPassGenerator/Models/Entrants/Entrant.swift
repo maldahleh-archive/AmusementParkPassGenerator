@@ -19,6 +19,7 @@ protocol Entrant: Dateable, Swipeable {
     var rideAccess: [RideAccess] { get set }
     var discountAccess: [DiscountAccess] { get set }
     
+    func swipe<T>(withSwipeType swipe: T) -> [T]
     func birthday() -> Date
     func isBirthday() -> Bool
 }
@@ -42,4 +43,20 @@ extension Entrant {
     func isBirthday() -> Bool { return birthday.isBirthday() }
     
     func isUnderFive() -> Bool { return birthday.isUnderFive() }
+    
+    func swipe<T>(withSwipeType type: T) -> [T] {
+        if type is AreaAccess {
+            return areaAccess as! [T]
+        }
+        
+        if type is RideAccess {
+            return rideAccess as! [T]
+        }
+        
+        if type is DiscountAccess {
+            return discountAccess as! [T]
+        }
+        
+        fatalError("Invalid type, unexpected.")
+    }
 }
