@@ -28,8 +28,16 @@ extension Date {
 class CreatedDate {
     let birthday: Date
     
-    init(day: Int, month: Int, year: Int) throws {
-        birthday = Date.create(day: day, month: month, year: year)
+    init(day: String, month: String, year: String) throws {
+        if String(day).count != 2 || String(month).count != 2 || String(year).count != 4 {
+            throw DataError.incorrectDateFormat
+        }
+        
+        if let day = Int(day), let month = Int(month), let year = Int(year) {
+            birthday = Date.create(day: day, month: month, year: year)
+        } else {
+            throw DataError.invalidDate
+        }
     }
 }
 

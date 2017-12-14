@@ -20,8 +20,8 @@ extension ViewController {
         let splitDate = dobTextField.text?.split(separator: "/")
         
         do {
-            if let splitDate = splitDate, let dayObj = splitDate[safe: 1], let day = Int(dayObj), let monthObj = splitDate[safe: 0], let month = Int(monthObj), let yearObj = splitDate[safe: 2], let year = Int(yearObj) {
-                birthday = try CreatedDate(day: day, month: month, year: year)
+            if let splitDate = splitDate, let day = splitDate[safe: 1], let month = splitDate[safe: 0], let year = splitDate[safe: 2] {
+                birthday = try CreatedDate(day: String(day), month: String(month), year: String(year))
             } else {
                 throw DataError.invalidDate
             }
